@@ -10,9 +10,7 @@
 		276A9A7B1F71BADB00D50312 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 276A9A7A1F71BADB00D50312 /* Assets.xcassets */; };
 		276A9A7E1F71BADB00D50312 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 276A9A7C1F71BADB00D50312 /* LaunchScreen.storyboard */; };
 		276A9A911F72F49300D50312 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276A9A8A1F72F49300D50312 /* AppDelegate.swift */; };
-		276A9A921F72F49300D50312 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 276A9A8D1F72F49300D50312 /* Info.plist */; };
 		276A9A981F72F62A00D50312 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 276A9A971F72F62A00D50312 /* Main.storyboard */; };
-		276A9A9B1F72F7EC00D50312 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 276A9A9A1F72F7EC00D50312 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,7 +20,6 @@
 		276A9A8A1F72F49300D50312 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		276A9A8D1F72F49300D50312 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		276A9A971F72F62A00D50312 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		276A9A9A1F72F7EC00D50312 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,7 +36,6 @@
 		276A9A671F71BADB00D50312 = {
 			isa = PBXGroup;
 			children = (
-				276A9A9A1F72F7EC00D50312 /* Default-568h@2x.png */,
 				276A9A721F71BADB00D50312 /* Findie */,
 				276A9A711F71BADB00D50312 /* Products */,
 			);
@@ -198,8 +194,6 @@
 			files = (
 				276A9A7E1F71BADB00D50312 /* LaunchScreen.storyboard in Resources */,
 				276A9A7B1F71BADB00D50312 /* Assets.xcassets in Resources */,
-				276A9A921F72F49300D50312 /* Info.plist in Resources */,
-				276A9A9B1F72F7EC00D50312 /* Default-568h@2x.png in Resources */,
 				276A9A981F72F62A00D50312 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -326,7 +320,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = Findie/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Findie/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.Findie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -338,7 +332,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = Findie/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Findie/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.Findie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
