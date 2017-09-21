@@ -11,6 +11,9 @@
 		276A9A7E1F71BADB00D50312 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 276A9A7C1F71BADB00D50312 /* LaunchScreen.storyboard */; };
 		276A9A911F72F49300D50312 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276A9A8A1F72F49300D50312 /* AppDelegate.swift */; };
 		276A9A981F72F62A00D50312 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 276A9A971F72F62A00D50312 /* Main.storyboard */; };
+		27D5C1851F743FFA00447D24 /* FDMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5C1841F743FFA00447D24 /* FDMainViewController.swift */; };
+		27D5C1871F74404E00447D24 /* FDCategoriesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5C1861F74404E00447D24 /* FDCategoriesCollectionViewController.swift */; };
+		27D5C18C1F7440C300447D24 /* FDCategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5C18B1F7440C300447D24 /* FDCategoriesCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +23,9 @@
 		276A9A8A1F72F49300D50312 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		276A9A8D1F72F49300D50312 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		276A9A971F72F62A00D50312 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		27D5C1841F743FFA00447D24 /* FDMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDMainViewController.swift; sourceTree = "<group>"; };
+		27D5C1861F74404E00447D24 /* FDCategoriesCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDCategoriesCollectionViewController.swift; sourceTree = "<group>"; };
+		27D5C18B1F7440C300447D24 /* FDCategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDCategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +112,7 @@
 		276A9A941F72F60E00D50312 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				27D5C18A1F7440C300447D24 /* Categories Collection View Cell */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -129,8 +136,18 @@
 		276A9A991F72F7C700D50312 /* MainViewController */ = {
 			isa = PBXGroup;
 			children = (
+				27D5C1841F743FFA00447D24 /* FDMainViewController.swift */,
+				27D5C1861F74404E00447D24 /* FDCategoriesCollectionViewController.swift */,
 			);
 			path = MainViewController;
+			sourceTree = "<group>";
+		};
+		27D5C18A1F7440C300447D24 /* Categories Collection View Cell */ = {
+			isa = PBXGroup;
+			children = (
+				27D5C18B1F7440C300447D24 /* FDCategoriesCollectionViewCell.swift */,
+			);
+			path = "Categories Collection View Cell";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,6 +182,7 @@
 				TargetAttributes = {
 					276A9A6F1F71BADB00D50312 = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = W7FZ2R7QG2;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -206,6 +224,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				276A9A911F72F49300D50312 /* AppDelegate.swift in Sources */,
+				27D5C1871F74404E00447D24 /* FDCategoriesCollectionViewController.swift in Sources */,
+				27D5C18C1F7440C300447D24 /* FDCategoriesCollectionViewCell.swift in Sources */,
+				27D5C1851F743FFA00447D24 /* FDMainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,9 +341,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = W7FZ2R7QG2;
 				INFOPLIST_FILE = "$(SRCROOT)/Findie/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.app.Findie;
+				PRODUCT_BUNDLE_IDENTIFIER = com.silentmosque.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -332,9 +354,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = W7FZ2R7QG2;
 				INFOPLIST_FILE = "$(SRCROOT)/Findie/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.app.Findie;
+				PRODUCT_BUNDLE_IDENTIFIER = com.silentmosque.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
