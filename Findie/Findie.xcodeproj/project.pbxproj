@@ -11,7 +11,6 @@
 		276A9A7E1F71BADB00D50312 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 276A9A7C1F71BADB00D50312 /* LaunchScreen.storyboard */; };
 		276A9A911F72F49300D50312 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276A9A8A1F72F49300D50312 /* AppDelegate.swift */; };
 		276A9A981F72F62A00D50312 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 276A9A971F72F62A00D50312 /* Main.storyboard */; };
-		27D5C1851F743FFA00447D24 /* FDMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5C1841F743FFA00447D24 /* FDMainViewController.swift */; };
 		27D5C1871F74404E00447D24 /* FDCategoriesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5C1861F74404E00447D24 /* FDCategoriesCollectionViewController.swift */; };
 		27D5C18C1F7440C300447D24 /* FDCategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5C18B1F7440C300447D24 /* FDCategoriesCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -23,7 +22,6 @@
 		276A9A8A1F72F49300D50312 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		276A9A8D1F72F49300D50312 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		276A9A971F72F62A00D50312 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		27D5C1841F743FFA00447D24 /* FDMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDMainViewController.swift; sourceTree = "<group>"; };
 		27D5C1861F74404E00447D24 /* FDCategoriesCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDCategoriesCollectionViewController.swift; sourceTree = "<group>"; };
 		27D5C18B1F7440C300447D24 /* FDCategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDCategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -136,7 +134,6 @@
 		276A9A991F72F7C700D50312 /* MainViewController */ = {
 			isa = PBXGroup;
 			children = (
-				27D5C1841F743FFA00447D24 /* FDMainViewController.swift */,
 				27D5C1861F74404E00447D24 /* FDCategoriesCollectionViewController.swift */,
 			);
 			path = MainViewController;
@@ -177,12 +174,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = elahiammar;
 				TargetAttributes = {
 					276A9A6F1F71BADB00D50312 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = W7FZ2R7QG2;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -226,7 +224,6 @@
 				276A9A911F72F49300D50312 /* AppDelegate.swift in Sources */,
 				27D5C1871F74404E00447D24 /* FDCategoriesCollectionViewController.swift in Sources */,
 				27D5C18C1F7440C300447D24 /* FDCategoriesCollectionViewCell.swift in Sources */,
-				27D5C1851F743FFA00447D24 /* FDMainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,7 +251,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -262,7 +261,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -304,7 +307,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -312,7 +317,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -346,7 +355,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.silentmosque.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -359,7 +369,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.silentmosque.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
