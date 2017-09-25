@@ -9,5 +9,13 @@
 import UIKit
 
 class FDCategoriesCollectionViewCell: UICollectionViewCell {
+    // MARK: - Outlets
     
+    
+    // MARK: - Functions
+    
+    func confiureCell() {
+        
+        
+    }
 }
