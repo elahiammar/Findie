@@ -10,8 +10,9 @@ import UIKit
 
 class FDCategoriesCollectionViewCell: UICollectionViewCell {
     // MARK: - Outlets
-    
-    
+    @IBOutlet weak var iconImageView: UIImageView!
+    @IBOutlet weak var titleImageView: UILabel!
+
     // MARK: - Functions
     
     func confiureCell() {

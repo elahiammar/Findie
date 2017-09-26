@@ -10,7 +10,7 @@ import UIKit
 
 private let reuseIdentifier = "FDCategoriesCollectionViewCell"
 
-class FDCategoriesCollectionViewController: UICollectionViewController {
+class FDCategoriesCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     // MARK: - Properties
     var viewModel: FDCategoriesViewModel = FDCategoriesViewModel()
     
@@ -60,7 +60,6 @@ class FDCategoriesCollectionViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! FDCategoriesCollectionViewCell
         
         // Configure the cell
-        cell
         return cell
         
     }
@@ -96,4 +95,11 @@ class FDCategoriesCollectionViewController: UICollectionViewController {
     }
     */
 
+    // MARK: UICollectionViewDelegate
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = (collectionView.frame.size.width / 3.0) - 20.0
+        let height = width
+        return CGSize(width: width, height: height)
+        
+    }
 }

@@ -11,6 +11,6 @@ import Foundation
 struct Constants {
     
     // Categories Array
-    static let categoriesArray: Array = ["Banks/ATM", "Hotels", "Restaurants", "Coffee Shops", "Gas Stations", "Hospitals", "Pharmacies", "Supermarkets", "Parking"]
+    static let categoriesArray: Array = ["Banks/ATM", "Hotels", "Restaurants", "Coffee Shops", "Gas Stations", "Hospitals", "Parks", "Pharmacies", "Parking", "Library", "Supermarkets", "Bus Stations", "Clothing", "Salon", "Car Repair"]
     
 }

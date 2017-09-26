@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="g20-v7-bPO">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -8,18 +8,13 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Avenir.ttc">
-            <string>Avenir-Heavy</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Findie-->
         <scene sceneID="fqp-E1-77b">
             <objects>
                 <collectionViewController storyboardIdentifier="FDCategoriesCollectionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2eT-bF-BK5" customClass="FDCategoriesCollectionViewController" customModule="Findie" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="LNE-XI-OKT">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" id="LNE-XI-OKT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fGu-j8-5eO">
@@ -29,35 +24,40 @@
                             <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FDCategoriesCollectionViewCell" id="Wzv-3W-jP7" customClass="FDCategoriesCollectionViewCell" customModule="Findie" customModuleProvider="target">
-                                <rect key="frame" x="10" y="10" width="103" height="103"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="FDCategoriesCollectionViewCell" reuseIdentifier="FDCategoriesCollectionViewCell" id="Wzv-3W-jP7" customClass="FDCategoriesCollectionViewCell" customModule="Findie" customModuleProvider="target">
+                                <rect key="frame" x="10" y="10" width="120" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="103" height="103"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Gas Stations" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2U-xq-X23">
-                                            <rect key="frame" x="8" y="71" width="87" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gas Stations" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2U-xq-X23">
+                                            <rect key="frame" x="8" y="95" width="104" height="17"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="21" id="GKO-xL-xp3"/>
+                                                <constraint firstAttribute="height" constant="17" id="ueG-o3-tWq"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="14"/>
+                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="14"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kxp-9b-XHb">
-                                            <rect key="frame" x="-94" y="-34" width="240" height="128"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gas" translatesAutoresizingMaskIntoConstraints="NO" id="kxp-9b-XHb">
+                                            <rect key="frame" x="35" y="35" width="50" height="50"/>
                                         </imageView>
                                     </subviews>
                                 </view>
                                 <color key="backgroundColor" red="0.0039215686274509803" green="0.69803921568627447" blue="0.58039215686274503" alpha="0.97808754279999999" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="e2U-xq-X23" secondAttribute="trailing" id="KO3-q2-84B"/>
-                                    <constraint firstAttribute="bottom" secondItem="e2U-xq-X23" secondAttribute="bottom" constant="82" id="YdI-wf-OH8"/>
-                                    <constraint firstItem="e2U-xq-X23" firstAttribute="leading" secondItem="Wzv-3W-jP7" secondAttribute="leading" constant="16" id="o4Y-nG-Pe6"/>
+                                    <constraint firstItem="kxp-9b-XHb" firstAttribute="centerX" secondItem="Wzv-3W-jP7" secondAttribute="centerX" id="FJY-eK-1ZI"/>
+                                    <constraint firstItem="kxp-9b-XHb" firstAttribute="centerY" secondItem="Wzv-3W-jP7" secondAttribute="centerY" id="J45-GT-lvY"/>
+                                    <constraint firstItem="e2U-xq-X23" firstAttribute="leading" secondItem="Wzv-3W-jP7" secondAttribute="leading" constant="8" id="ZJu-L9-jz0"/>
+                                    <constraint firstAttribute="bottom" secondItem="e2U-xq-X23" secondAttribute="bottom" constant="8" id="Ze9-pN-1gy"/>
+                                    <constraint firstAttribute="trailing" secondItem="e2U-xq-X23" secondAttribute="trailing" constant="8" id="xka-wa-EE0"/>
                                 </constraints>
-                                <size key="customSize" width="103" height="103"/>
+                                <size key="customSize" width="120" height="120"/>
+                                <connections>
+                                    <outlet property="iconImageView" destination="kxp-9b-XHb" id="HTa-Dn-P1N"/>
+                                    <outlet property="titleImageView" destination="e2U-xq-X23" id="252-Ru-WQd"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -69,7 +69,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="epl-Ta-ci3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="696.79999999999995" y="169.56521739130437"/>
+            <point key="canvasLocation" x="695.20000000000005" y="168.6656671664168"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Pss-kn-avO">
@@ -77,7 +77,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="g20-v7-bPO" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" largeTitles="YES" id="3op-0x-gdj">
-                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.0039215686269999999" green="0.69803921570000005" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
@@ -97,4 +97,7 @@
             <point key="canvasLocation" x="-76" y="170"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="gas" width="50" height="50"/>
+    </resources>
 </document>
