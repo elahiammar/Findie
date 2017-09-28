@@ -2,5 +2,5 @@
 
 Images in this app are used from following websites: -
 
-a. www.iconsdb.com \n
+a. www.iconsdb.com
 b. www.clipartpanda.com
