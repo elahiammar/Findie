@@ -1,6 +1,6 @@
 # Findie
 
-Imagesin this app are used from following websites: -
+Images in this app are used from following websites: -
 
-a. www.iconsdb.com
+a. www.iconsdb.com \n
 b. www.clipartpanda.com
