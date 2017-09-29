@@ -76,7 +76,7 @@
                                 </variation>
                                 <connections>
                                     <outlet property="iconImageView" destination="kxp-9b-XHb" id="HTa-Dn-P1N"/>
-                                    <outlet property="titleImageView" destination="e2U-xq-X23" id="252-Ru-WQd"/>
+                                    <outlet property="titleLabel" destination="e2U-xq-X23" id="dNF-O1-ld3"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -85,7 +85,7 @@
                             <outlet property="delegate" destination="2eT-bF-BK5" id="uDp-KK-18O"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Findie" id="uxs-P0-P1u"/>
+                    <navigationItem key="navigationItem" title="Findie" largeTitleDisplayMode="always" id="uxs-P0-P1u"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="epl-Ta-ci3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

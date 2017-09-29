@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		271E36351F7D73FE00A7AFF3 /* FDCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271E36341F7D73FE00A7AFF3 /* FDCategory.swift */; };
 		2725D9101F77FBA2005466FA /* FDCategoriesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2725D90F1F77FBA2005466FA /* FDCategoriesCollectionViewController.swift */; };
 		2725D9121F77FBFD005466FA /* FDCategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2725D9111F77FBFD005466FA /* FDCategoriesViewModel.swift */; };
 		2725D9171F7813D7005466FA /* FDConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2725D9161F7813D7005466FA /* FDConstants.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		271E36341F7D73FE00A7AFF3 /* FDCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDCategory.swift; sourceTree = "<group>"; };
 		2725D90F1F77FBA2005466FA /* FDCategoriesCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDCategoriesCollectionViewController.swift; sourceTree = "<group>"; };
 		2725D9111F77FBFD005466FA /* FDCategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDCategoriesViewModel.swift; sourceTree = "<group>"; };
 		2725D9161F7813D7005466FA /* FDConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDConstants.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 		276A9A8B1F72F49300D50312 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				271E36341F7D73FE00A7AFF3 /* FDCategory.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 				276A9A911F72F49300D50312 /* AppDelegate.swift in Sources */,
 				2725D9171F7813D7005466FA /* FDConstants.swift in Sources */,
 				2725D9101F77FBA2005466FA /* FDCategoriesCollectionViewController.swift in Sources */,
+				271E36351F7D73FE00A7AFF3 /* FDCategory.swift in Sources */,
 				2725D9121F77FBFD005466FA /* FDCategoriesViewModel.swift in Sources */,
 				27D5C18C1F7440C300447D24 /* FDCategoriesCollectionViewCell.swift in Sources */,
 			);
@@ -368,6 +372,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = W7FZ2R7QG2;
 				INFOPLIST_FILE = "$(SRCROOT)/Findie/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.silentmosque.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -382,6 +387,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = W7FZ2R7QG2;
 				INFOPLIST_FILE = "$(SRCROOT)/Findie/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.silentmosque.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";

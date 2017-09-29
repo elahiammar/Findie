@@ -10,13 +10,16 @@ import UIKit
 
 class FDCategoriesCollectionViewCell: UICollectionViewCell {
     // MARK: - Outlets
+    
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var iconImageView: UIImageView!
-    @IBOutlet weak var titleImageView: UILabel!
 
     // MARK: - Functions
     
-    func confiureCell() {
-        
+    func confiureCellWith(category: FDCategory) {
+        // Configure cell
+        titleLabel.text = category.titleName
+        iconImageView.image = UIImage(named: category.imageName)
         
     }
 }

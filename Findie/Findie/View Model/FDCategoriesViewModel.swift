@@ -11,8 +11,16 @@ import Foundation
 class FDCategoriesViewModel {
     // MARK: Properties
     
-    var categoriesArray: Array = Constants.categoriesArray
+    var categoriesArray: NSMutableArray = NSMutableArray()
     
     // MARK: Functions
 
+    func initializeCategoriesArray() {
+        // Prepare categoriesArray with Dictionary
+        for (titleName, imageName) in Constants.categoriesDictionary {
+            let category = FDCategory.init(titleName: titleName, imageName: imageName)
+            categoriesArray.add(category)
+            
+        }
+    }
 }

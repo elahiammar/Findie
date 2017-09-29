@@ -9,8 +9,13 @@
 import Foundation
 
 struct Constants {
-    
-    // Categories Array
-    static let categoriesArray: Array = ["Banks/ATM", "Hotels", "Restaurants", "Coffee Shops", "Gas Stations", "Hospitals", "Parks", "Pharmacies", "Parking", "Library", "Supermarkets", "Bus Stations", "Clothing", "Salon", "Car Repair"]
+    // Categories Dictionary
+    static let categoriesDictionary: Dictionary<String, String> = ["Hotels": "hotel", "Restaurants": "restaurant",
+                                                                   "Coffee Shops": "coffee", "Gas Stations": "gas",
+                                                                   "Bus Stations": "bus-station", "Clothing": "clothing",
+                                                                   "Salon": "salon", "Supermarkets": "supermarket",
+                                                                   "Hospitals": "hospital", "Parks": "park",
+                                                                   "Pharmacies": "pharmacy", "Parking": "parking",
+                                                                   "Libraries": "library", "Car Repair": "car-repair"]
     
 }
