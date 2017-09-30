@@ -10,12 +10,14 @@ import Foundation
 
 struct Constants {
     // Categories Dictionary
-    static let categoriesDictionary: Dictionary<String, String> = ["Hotels": "hotel", "Restaurants": "restaurant",
-                                                                   "Coffee Shops": "coffee", "Gas Stations": "gas",
-                                                                   "Bus Stations": "bus-station", "Clothing": "clothing",
-                                                                   "Salon": "salon", "Supermarkets": "supermarket",
-                                                                   "Hospitals": "hospital", "Parks": "park",
-                                                                   "Pharmacies": "pharmacy", "Parking": "parking",
-                                                                   "Libraries": "library", "Car Repair": "car-repair"]
+    static let categoriesDictionary: Dictionary<String, String> = ["Hotel": "hotel", "Restaurant": "restaurant",
+                                                                   "Coffee": "coffee", "Gas Station": "gas",
+                                                                   "Bus Station": "bus-station", "Clothing": "clothing",
+                                                                   "Salon": "salon", "Grocery": "supermarket",
+                                                                   "Hospital": "hospital", "Park": "park",
+                                                                   "Pharmacy": "pharmacy", "Parking": "parking",
+                                                                   "Library": "library", "Car Repair": "car-repair",
+                                                                   "Airport": "airport", "Train Station": "train",
+                                                                   "Police": "police"]
     
 }

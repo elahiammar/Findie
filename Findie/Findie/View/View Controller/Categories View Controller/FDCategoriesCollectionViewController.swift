@@ -14,13 +14,18 @@ class FDCategoriesCollectionViewController: UICollectionViewController, UICollec
     // MARK: - Properties
     
     var viewModel: FDCategoriesViewModel = FDCategoriesViewModel()
-    
+    private let screenSize: CGSize = UIScreen.main.bounds.size
     // MARK: - Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
-        
+
+        // Set FromSafeArea for UICollectionViewFlowLayoutSectionInsetReference
+        if let flowLayout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
+                flowLayout.sectionInsetReference = .fromSafeArea
+            
+        }
         // Initalize categories array to populate data
         viewModel.initializeCategoriesArray()
         collectionView?.reloadData()
@@ -105,9 +110,15 @@ class FDCategoriesCollectionViewController: UICollectionViewController, UICollec
 
     // MARK: UICollectionViewDelegate
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = (collectionView.frame.size.width / 3.0) - 20.0
+        // Show 3 cells in portrait
+        let numberOfItemsPerRow: CGFloat = 3.0
+        
+        // Left Right Padding
+        let leftRightPadding: CGFloat = 20.0
+        
+        let width = (collectionView.frame.size.width / numberOfItemsPerRow) - leftRightPadding
         let height = width
         return CGSize(width: width, height: height)
-        
+
     }
 }

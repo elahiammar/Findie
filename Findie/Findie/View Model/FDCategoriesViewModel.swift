@@ -16,7 +16,7 @@ class FDCategoriesViewModel {
     // MARK: Functions
 
     func initializeCategoriesArray() {
-        // Prepare categoriesArray with Dictionary
+        // Prepare categoriesArray from Dictionary
         for (titleName, imageName) in Constants.categoriesDictionary {
             let category = FDCategory.init(titleName: titleName, imageName: imageName)
             categoriesArray.add(category)
