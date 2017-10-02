@@ -40,7 +40,10 @@ class FDCategoriesCollectionViewController: UICollectionViewController, UICollec
     // MARK: - Functions
     
     func setupNavigationBar() {
-
+        let searchController: UISearchController = FDSearchController(searchResultsController: nil)
+       navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
+        
     }
 
     /*
@@ -59,7 +62,6 @@ class FDCategoriesCollectionViewController: UICollectionViewController, UICollec
         return 1
         
     }
-
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModel.categoriesArray.count

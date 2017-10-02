@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		270F7FA31F82BFCA00AB7F51 /* FDSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270F7FA21F82BFCA00AB7F51 /* FDSearchBar.swift */; };
+		270F7FA51F82C02E00AB7F51 /* FDSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270F7FA41F82C02E00AB7F51 /* FDSearchController.swift */; };
 		271E36351F7D73FE00A7AFF3 /* FDCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271E36341F7D73FE00A7AFF3 /* FDCategory.swift */; };
 		2725D9101F77FBA2005466FA /* FDCategoriesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2725D90F1F77FBA2005466FA /* FDCategoriesCollectionViewController.swift */; };
 		2725D9121F77FBFD005466FA /* FDCategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2725D9111F77FBFD005466FA /* FDCategoriesViewModel.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		270F7FA21F82BFCA00AB7F51 /* FDSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDSearchBar.swift; sourceTree = "<group>"; };
+		270F7FA41F82C02E00AB7F51 /* FDSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDSearchController.swift; sourceTree = "<group>"; };
 		271E36341F7D73FE00A7AFF3 /* FDCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDCategory.swift; sourceTree = "<group>"; };
 		2725D90F1F77FBA2005466FA /* FDCategoriesCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDCategoriesCollectionViewController.swift; sourceTree = "<group>"; };
 		2725D9111F77FBFD005466FA /* FDCategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDCategoriesViewModel.swift; sourceTree = "<group>"; };
@@ -43,6 +47,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		270F7FA11F82BF9A00AB7F51 /* Search Bar */ = {
+			isa = PBXGroup;
+			children = (
+				270F7FA21F82BFCA00AB7F51 /* FDSearchBar.swift */,
+				270F7FA41F82C02E00AB7F51 /* FDSearchController.swift */,
+			);
+			path = "Search Bar";
+			sourceTree = "<group>";
+		};
 		2725D90E1F77FBA2005466FA /* Categories View Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +130,7 @@
 		276A9A8E1F72F49300D50312 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				270F7FA11F82BF9A00AB7F51 /* Search Bar */,
 				276A9A951F72F60E00D50312 /* Storyboard */,
 				276A9A941F72F60E00D50312 /* Cell */,
 				276A9A961F72F60E00D50312 /* View Controller */,
@@ -239,11 +253,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				276A9A911F72F49300D50312 /* AppDelegate.swift in Sources */,
+				270F7FA31F82BFCA00AB7F51 /* FDSearchBar.swift in Sources */,
 				2725D9171F7813D7005466FA /* FDConstants.swift in Sources */,
 				2725D9101F77FBA2005466FA /* FDCategoriesCollectionViewController.swift in Sources */,
 				271E36351F7D73FE00A7AFF3 /* FDCategory.swift in Sources */,
 				2725D9121F77FBFD005466FA /* FDCategoriesViewModel.swift in Sources */,
 				27D5C18C1F7440C300447D24 /* FDCategoriesCollectionViewCell.swift in Sources */,
+				270F7FA51F82C02E00AB7F51 /* FDSearchController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
