@@ -57,6 +57,11 @@
                                     <constraint firstItem="e2U-xq-X23" firstAttribute="leading" secondItem="Wzv-3W-jP7" secondAttribute="leading" constant="8" id="umd-Ve-XO7"/>
                                 </constraints>
                                 <size key="customSize" width="120" height="120"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="0yP-4d-fBF"/>
