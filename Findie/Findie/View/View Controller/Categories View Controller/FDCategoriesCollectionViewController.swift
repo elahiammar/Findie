@@ -41,8 +41,7 @@ class FDCategoriesCollectionViewController: UICollectionViewController, UICollec
     
     func setupNavigationBar() {
         let searchController: UISearchController = FDSearchController(searchResultsController: nil)
-       navigationItem.searchController = searchController
-        navigationItem.hidesSearchBarWhenScrolling = false
+        navigationItem.searchController = searchController
         
     }
 

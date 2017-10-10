@@ -12,7 +12,7 @@ class FDSearchController: UISearchController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.searchBar.setTextFieldColor(color: UIColor.white)
         // Do any additional setup after loading the view.
     }
 

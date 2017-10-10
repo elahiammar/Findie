@@ -13,6 +13,7 @@
 		2725D9101F77FBA2005466FA /* FDCategoriesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2725D90F1F77FBA2005466FA /* FDCategoriesCollectionViewController.swift */; };
 		2725D9121F77FBFD005466FA /* FDCategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2725D9111F77FBFD005466FA /* FDCategoriesViewModel.swift */; };
 		2725D9171F7813D7005466FA /* FDConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2725D9161F7813D7005466FA /* FDConstants.swift */; };
+		27348D221F8D4AA500912330 /* UISearchBar+CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27348D211F8D4AA500912330 /* UISearchBar+CustomColor.swift */; };
 		276A9A7B1F71BADB00D50312 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 276A9A7A1F71BADB00D50312 /* Assets.xcassets */; };
 		276A9A7E1F71BADB00D50312 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 276A9A7C1F71BADB00D50312 /* LaunchScreen.storyboard */; };
 		276A9A911F72F49300D50312 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276A9A8A1F72F49300D50312 /* AppDelegate.swift */; };
@@ -27,6 +28,7 @@
 		2725D90F1F77FBA2005466FA /* FDCategoriesCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDCategoriesCollectionViewController.swift; sourceTree = "<group>"; };
 		2725D9111F77FBFD005466FA /* FDCategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDCategoriesViewModel.swift; sourceTree = "<group>"; };
 		2725D9161F7813D7005466FA /* FDConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDConstants.swift; sourceTree = "<group>"; };
+		27348D211F8D4AA500912330 /* UISearchBar+CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISearchBar+CustomColor.swift"; sourceTree = "<group>"; };
 		276A9A701F71BADB00D50312 /* Findie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Findie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		276A9A7A1F71BADB00D50312 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		276A9A7D1F71BADB00D50312 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -72,6 +74,14 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		27348D201F8D49CA00912330 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				27348D211F8D4AA500912330 /* UISearchBar+CustomColor.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		276A9A671F71BADB00D50312 = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +103,7 @@
 			children = (
 				276A9A891F72F49300D50312 /* AppDelegate */,
 				2725D9131F781367005466FA /* Constants */,
+				27348D201F8D49CA00912330 /* Extension */,
 				276A9A8B1F72F49300D50312 /* Model */,
 				276A9A8E1F72F49300D50312 /* View */,
 				276A9A901F72F49300D50312 /* View Model */,
@@ -254,6 +265,7 @@
 			files = (
 				276A9A911F72F49300D50312 /* AppDelegate.swift in Sources */,
 				270F7FA31F82BFCA00AB7F51 /* FDSearchBar.swift in Sources */,
+				27348D221F8D4AA500912330 /* UISearchBar+CustomColor.swift in Sources */,
 				2725D9171F7813D7005466FA /* FDConstants.swift in Sources */,
 				2725D9101F77FBA2005466FA /* FDCategoriesCollectionViewController.swift in Sources */,
 				271E36351F7D73FE00A7AFF3 /* FDCategory.swift in Sources */,
