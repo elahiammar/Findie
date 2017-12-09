@@ -12,8 +12,10 @@ private let reuseIdentifier = "FDCategoriesCollectionViewCell"
 
 class FDCategoriesCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     // MARK: - Properties
-    
+    var searchController: FDSearchController!
+    var resultsViewController: FDResultsTableViewController = FDResultsTableViewController()
     var viewModel: FDCategoriesViewModel = FDCategoriesViewModel()
+    
     private let screenSize: CGSize = UIScreen.main.bounds.size
     // MARK: - Life Cycle
     
@@ -40,9 +42,10 @@ class FDCategoriesCollectionViewController: UICollectionViewController, UICollec
     // MARK: - Functions
     
     func setupNavigationBar() {
-        let searchController: UISearchController = FDSearchController(searchResultsController: nil)
+        searchController = FDSearchController(searchResultsController: resultsViewController)
         navigationItem.searchController = searchController
-        
+        navigationItem.hidesSearchBarWhenScrolling = false
+        definesPresentationContext = true
     }
 
     /*
@@ -69,9 +72,7 @@ class FDCategoriesCollectionViewController: UICollectionViewController, UICollec
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! FDCategoriesCollectionViewCell
-       
         let category: FDCategory = viewModel.categoriesArray[indexPath.row] as! FDCategory
-        
         // Configure the cell
         cell.confiureCellWith(category: category)
         return cell
@@ -109,7 +110,8 @@ class FDCategoriesCollectionViewController: UICollectionViewController, UICollec
     }
     */
 
-    // MARK: UICollectionViewDelegate
+    // MARK: UICollectionViewDelegateFlowLayout
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         // Show 3 cells in portrait
         let numberOfItemsPerRow: CGFloat = 3.0

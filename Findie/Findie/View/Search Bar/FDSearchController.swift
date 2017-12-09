@@ -10,26 +10,36 @@ import UIKit
 
 class FDSearchController: UISearchController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.searchBar.setTextFieldColor(color: UIColor.white)
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    // MARK: - Initialization
+    
+    override init(searchResultsController: UIViewController?) {
+        super.init(searchResultsController: searchResultsController)
+        // Customize searchBar
+        customizeSearchBar()
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
-    */
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
+    // MARK: - Functions
+    
+    func customizeSearchBar() {
+        if let textfield = searchBar.value(forKey: "searchField") as? UITextField {
+            if let backgroundview = textfield.subviews.first {
+                // Background color
+                backgroundview.backgroundColor = UIColor.white
+                
+                // Rounded corner
+                backgroundview.layer.cornerRadius = 10;
+                backgroundview.clipsToBounds = true;
+                
+            }
+        }
+    }
 }
