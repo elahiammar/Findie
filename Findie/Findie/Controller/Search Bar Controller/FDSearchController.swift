@@ -15,7 +15,9 @@ class FDSearchController: UISearchController {
     override init(searchResultsController: UIViewController?) {
         super.init(searchResultsController: searchResultsController)
         // Customize searchBar
-        customizeSearchBar()
+        searchBar.setSerchTextcolor(color: UIColor.red)
+       customizeSearchBar()
+        searchBar.setSerchTextcolor(color: UIColor.red)
         
     }
     
@@ -30,16 +32,24 @@ class FDSearchController: UISearchController {
     // MARK: - Functions
     
     func customizeSearchBar() {
-        if let textfield = searchBar.value(forKey: "searchField") as? UITextField {
-            if let backgroundview = textfield.subviews.first {
+        if let searchField = searchBar.value(forKey: "searchField") as? UITextField {
+            if let backgroundview = searchField.subviews.first {
                 // Background color
                 backgroundview.backgroundColor = UIColor.white
-                
+                //searchField.textColor = UIColor.black
                 // Rounded corner
                 backgroundview.layer.cornerRadius = 10;
                 backgroundview.clipsToBounds = true;
                 
             }
         }
+    }
+}
+
+extension UISearchBar {
+    public func setSerchTextcolor(color: UIColor) {
+        let clrChange = subviews.flatMap { $0.subviews }
+        guard let sc = (clrChange.filter { $0 is UITextField }).first as? UITextField else { return }
+        sc.textColor = color
     }
 }
