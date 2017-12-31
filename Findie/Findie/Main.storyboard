@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="g20-v7-bPO">
-    <device id="retina5_5" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,7 +15,7 @@
             <objects>
                 <collectionViewController storyboardIdentifier="FDCategoriesCollectionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2eT-bF-BK5" customClass="FDCategoriesCollectionViewController" customModule="Findie" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="LNE-XI-OKT">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -82,6 +83,7 @@
                                 <connections>
                                     <outlet property="iconImageView" destination="kxp-9b-XHb" id="HTa-Dn-P1N"/>
                                     <outlet property="titleLabel" destination="e2U-xq-X23" id="dNF-O1-ld3"/>
+                                    <segue destination="f8X-iW-wAk" kind="show" id="MST-I8-PCd"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -96,23 +98,42 @@
             </objects>
             <point key="canvasLocation" x="694.20289855072474" y="167.11956521739131"/>
         </scene>
-        <!--Results Table View Controller-->
+        <!--Places-->
         <scene sceneID="oCO-tW-3SD">
             <objects>
                 <tableViewController storyboardIdentifier="FDResultsTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="f8X-iW-wAk" customClass="FDResultsTableViewController" customModule="Findie" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="PEg-co-8Lu">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="PEg-co-8Lu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FDSearchResultsTableViewCell" rowHeight="50" id="xeI-EC-O30" customClass="FDSearchResultsTableViewCell" customModule="Findie" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="50"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FDSearchResultsTableViewCell" textLabel="o9k-xX-Bk9" detailTextLabel="l9B-ru-fko" rowHeight="72" style="IBUITableViewCellStyleValue1" id="xeI-EC-O30" customClass="FDSearchResultsTableViewCell" customModule="Findie" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="55.333333333333336" width="375" height="72"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xeI-EC-O30" id="aZQ-xw-YeV">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="49.666666666666664"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="71.666666666666671"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="o9k-xX-Bk9">
+                                            <rect key="frame" x="15" y="26" width="33.333333333333336" height="20.333333333333332"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0039215686269999999" green="0.69803921570000005" blue="0.58039215690000001" alpha="0.97808754279999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="l9B-ru-fko">
+                                            <rect key="frame" x="300.33333333333331" y="26" width="58.666666666666664" height="20.333333333333332"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0039215686269999999" green="0.69803921570000005" blue="0.58039215690000001" alpha="0.97808754279999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <connections>
+                                    <segue destination="gpN-mj-Wob" kind="show" id="XTU-eH-hx1"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -120,10 +141,38 @@
                             <outlet property="delegate" destination="f8X-iW-wAk" id="aav-Zg-OTh"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Places" id="Bh8-Mw-VTX"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oqD-2A-gwf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="692.75362318840587" y="859.23913043478262"/>
+            <point key="canvasLocation" x="1506" y="170"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="8Wh-4t-C1f">
+            <objects>
+                <viewController storyboardIdentifier="FDMapViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gpN-mj-Wob" customClass="FDMapViewController" customModule="Findie" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wxL-zd-UKe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="R86-4m-fUq">
+                                <rect key="frame" x="0.0" y="140" width="375" height="672"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="R86-4m-fUq" firstAttribute="trailing" secondItem="SvK-VE-CMV" secondAttribute="trailing" id="9tx-nK-Sth"/>
+                            <constraint firstAttribute="bottom" secondItem="R86-4m-fUq" secondAttribute="bottom" id="Nm1-Fw-9IB"/>
+                            <constraint firstItem="R86-4m-fUq" firstAttribute="leading" secondItem="SvK-VE-CMV" secondAttribute="leading" id="jap-CK-5wD"/>
+                            <constraint firstItem="R86-4m-fUq" firstAttribute="top" secondItem="SvK-VE-CMV" secondAttribute="top" id="qy7-qe-b36"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="SvK-VE-CMV"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Map" id="oNG-bE-LPc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wSc-u5-QIE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2360.8000000000002" y="169.21182266009853"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Pss-kn-avO">
@@ -131,10 +180,10 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="g20-v7-bPO" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" largeTitles="YES" id="3op-0x-gdj">
-                        <rect key="frame" x="0.0" y="20" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.0039215686269999999" green="0.69803921570000005" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
