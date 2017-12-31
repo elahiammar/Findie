@@ -92,7 +92,7 @@
                             <outlet property="delegate" destination="2eT-bF-BK5" id="uDp-KK-18O"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Findie" largeTitleDisplayMode="always" id="uxs-P0-P1u"/>
+                    <navigationItem key="navigationItem" title="Findie" id="uxs-P0-P1u"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="epl-Ta-ci3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
