@@ -15,6 +15,7 @@
 		276A9A7E1F71BADB00D50312 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 276A9A7C1F71BADB00D50312 /* LaunchScreen.storyboard */; };
 		276A9A911F72F49300D50312 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276A9A8A1F72F49300D50312 /* AppDelegate.swift */; };
 		2797172A1FCAE57800AF65E8 /* FDSearchResultsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279717291FCAE57800AF65E8 /* FDSearchResultsTableViewCell.swift */; };
+		27A7948A2028DD2100E335DC /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27A794892028DD2100E335DC /* MapKit.framework */; };
 		27D5C18C1F7440C300447D24 /* FDCategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5C18B1F7440C300447D24 /* FDCategoriesCollectionViewCell.swift */; };
 		27DD21841FE8B8B200B45330 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27DD21811FE8B8B200B45330 /* Main.storyboard */; };
 		27DD21921FE8B94400B45330 /* FDSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DD218C1FE8B94400B45330 /* FDSearchController.swift */; };
@@ -33,6 +34,7 @@
 		276A9A8A1F72F49300D50312 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		276A9A8D1F72F49300D50312 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		279717291FCAE57800AF65E8 /* FDSearchResultsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDSearchResultsTableViewCell.swift; sourceTree = "<group>"; };
+		27A794892028DD2100E335DC /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		27D5C18B1F7440C300447D24 /* FDCategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDCategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
 		27DD21811FE8B8B200B45330 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		27DD218C1FE8B94400B45330 /* FDSearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDSearchController.swift; sourceTree = "<group>"; };
@@ -45,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27A7948A2028DD2100E335DC /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +75,7 @@
 			children = (
 				276A9A721F71BADB00D50312 /* Findie */,
 				276A9A711F71BADB00D50312 /* Products */,
+				27A794882028DD2100E335DC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -156,6 +160,14 @@
 				279717291FCAE57800AF65E8 /* FDSearchResultsTableViewCell.swift */,
 			);
 			path = SearchResultsTableViewCell;
+			sourceTree = "<group>";
+		};
+		27A794882028DD2100E335DC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				27A794892028DD2100E335DC /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		27D5C18A1F7440C300447D24 /* Categories Collection View Cell */ = {
