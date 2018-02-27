@@ -18,7 +18,6 @@ class FDResultsViewModel {
     
     init(intWebServices webServices: WebServices) {
         webService = webServices
-        callWebService()
     }
     
     func callWebService() {
