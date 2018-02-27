@@ -16,11 +16,15 @@
 		276A9A911F72F49300D50312 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276A9A8A1F72F49300D50312 /* AppDelegate.swift */; };
 		2797172A1FCAE57800AF65E8 /* FDSearchResultsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279717291FCAE57800AF65E8 /* FDSearchResultsTableViewCell.swift */; };
 		27A7948A2028DD2100E335DC /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27A794892028DD2100E335DC /* MapKit.framework */; };
+		27AD44BA203E033B00F94600 /* WebServicesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AD44B9203E033B00F94600 /* WebServicesProtocol.swift */; };
+		27AD44BC203E04A400F94600 /* WebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AD44BB203E04A400F94600 /* WebServices.swift */; };
 		27D5C18C1F7440C300447D24 /* FDCategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5C18B1F7440C300447D24 /* FDCategoriesCollectionViewCell.swift */; };
 		27DD21841FE8B8B200B45330 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27DD21811FE8B8B200B45330 /* Main.storyboard */; };
 		27DD21921FE8B94400B45330 /* FDSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DD218C1FE8B94400B45330 /* FDSearchController.swift */; };
 		27DD21931FE8B94400B45330 /* FDCategoriesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DD218F1FE8B94400B45330 /* FDCategoriesCollectionViewController.swift */; };
 		27DD21941FE8B94400B45330 /* FDResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DD21911FE8B94400B45330 /* FDResultsTableViewController.swift */; };
+		27ECF01B2045CCD400449770 /* FDDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ECF01A2045CCD400449770 /* FDDataManager.swift */; };
+		27ECF01D2045D11C00449770 /* FDResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ECF01C2045D11C00449770 /* FDResultsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,11 +39,15 @@
 		276A9A8D1F72F49300D50312 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		279717291FCAE57800AF65E8 /* FDSearchResultsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDSearchResultsTableViewCell.swift; sourceTree = "<group>"; };
 		27A794892028DD2100E335DC /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		27AD44B9203E033B00F94600 /* WebServicesProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServicesProtocol.swift; sourceTree = "<group>"; };
+		27AD44BB203E04A400F94600 /* WebServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServices.swift; sourceTree = "<group>"; };
 		27D5C18B1F7440C300447D24 /* FDCategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDCategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
 		27DD21811FE8B8B200B45330 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		27DD218C1FE8B94400B45330 /* FDSearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDSearchController.swift; sourceTree = "<group>"; };
 		27DD218F1FE8B94400B45330 /* FDCategoriesCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDCategoriesCollectionViewController.swift; sourceTree = "<group>"; };
 		27DD21911FE8B94400B45330 /* FDResultsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDResultsTableViewController.swift; sourceTree = "<group>"; };
+		27ECF01A2045CCD400449770 /* FDDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDDataManager.swift; sourceTree = "<group>"; };
+		27ECF01C2045D11C00449770 /* FDResultsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDResultsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +100,9 @@
 			children = (
 				276A9A891F72F49300D50312 /* AppDelegate */,
 				2725D9131F781367005466FA /* Constants */,
+				27AD44B8203DFD4300F94600 /* Networking */,
 				27DD218A1FE8B94400B45330 /* Controller */,
+				27ECF0192045CCB400449770 /* Manager */,
 				276A9A8B1F72F49300D50312 /* Model */,
 				276A9A8E1F72F49300D50312 /* View */,
 				27DD218D1FE8B94400B45330 /* View Controller */,
@@ -141,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				2725D9111F77FBFD005466FA /* FDCategoriesViewModel.swift */,
+				27ECF01C2045D11C00449770 /* FDResultsViewModel.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -168,6 +179,15 @@
 				27A794892028DD2100E335DC /* MapKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		27AD44B8203DFD4300F94600 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				27AD44BB203E04A400F94600 /* WebServices.swift */,
+				27AD44B9203E033B00F94600 /* WebServicesProtocol.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		27D5C18A1F7440C300447D24 /* Categories Collection View Cell */ = {
@@ -218,6 +238,14 @@
 				27DD21911FE8B94400B45330 /* FDResultsTableViewController.swift */,
 			);
 			path = SearchResultsViewController;
+			sourceTree = "<group>";
+		};
+		27ECF0192045CCB400449770 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				27ECF01A2045CCD400449770 /* FDDataManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,12 +324,16 @@
 			files = (
 				27DD21931FE8B94400B45330 /* FDCategoriesCollectionViewController.swift in Sources */,
 				276A9A911F72F49300D50312 /* AppDelegate.swift in Sources */,
+				27AD44BC203E04A400F94600 /* WebServices.swift in Sources */,
+				27AD44BA203E033B00F94600 /* WebServicesProtocol.swift in Sources */,
 				2725D9171F7813D7005466FA /* FDConstants.swift in Sources */,
 				27DD21921FE8B94400B45330 /* FDSearchController.swift in Sources */,
 				27DD21941FE8B94400B45330 /* FDResultsTableViewController.swift in Sources */,
 				2797172A1FCAE57800AF65E8 /* FDSearchResultsTableViewCell.swift in Sources */,
 				271E36351F7D73FE00A7AFF3 /* FDCategory.swift in Sources */,
+				27ECF01D2045D11C00449770 /* FDResultsViewModel.swift in Sources */,
 				274106871FF8E77B005F56FD /* FDMapViewController.swift in Sources */,
+				27ECF01B2045CCD400449770 /* FDDataManager.swift in Sources */,
 				2725D9121F77FBFD005466FA /* FDCategoriesViewModel.swift in Sources */,
 				27D5C18C1F7440C300447D24 /* FDCategoriesCollectionViewCell.swift in Sources */,
 			);

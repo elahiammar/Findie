@@ -13,18 +13,23 @@ class FDResultsTableViewController: UITableViewController {
 
     // MARK: - Properties
     
-    let locationManager = CLLocationManager()
+    var viewModel: FDResultsViewModel = FDResultsViewModel(intWebServices: WebServices())
+    
+    // MARK: - Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
         
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.requestWhenInUseAuthorization()
-        
     }
 
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+    }
+    
+    
     func setupTableView() {
         tableView.tableFooterView = UIView(frame: .zero)
         tableView.register(FDSearchResultsTableViewCell.self, forCellReuseIdentifier: "FDSearchResultsTableViewCell")
@@ -59,29 +64,3 @@ class FDResultsTableViewController: UITableViewController {
     }
     */
 }
-
-// MARK: - Extension FDResultsTableViewController
-
-extension FDResultsTableViewController: CLLocationManagerDelegate {
-
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        if status == .authorizedWhenInUse {
-            locationManager.requestLocation()
-
-        }
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if locations.first != nil {
-            print("location:: (location)")
-            
-        }
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print("error:: (error)")
-        
-    }
-    
-}
-
