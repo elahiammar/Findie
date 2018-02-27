@@ -57,7 +57,6 @@ class FDCategoriesCollectionViewController: UICollectionViewController, UICollec
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
-        
     }
 
     /*
@@ -79,7 +78,6 @@ class FDCategoriesCollectionViewController: UICollectionViewController, UICollec
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModel.categoriesArray.count
-        
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -88,7 +86,6 @@ class FDCategoriesCollectionViewController: UICollectionViewController, UICollec
         // Configure the cell
         cell.confiureCellWith(category: category)
         return cell
-        
     }
 
     // MARK: UICollectionViewDelegate
@@ -134,7 +131,6 @@ class FDCategoriesCollectionViewController: UICollectionViewController, UICollec
         let width = (collectionView.frame.size.width / numberOfItemsPerRow) - leftRightPadding
         let height = width
         return CGSize(width: width, height: height)
-
     }
 }
 
@@ -153,13 +149,11 @@ extension FDCategoriesCollectionViewController: CLLocationManagerDelegate {
         if locations.first != nil {
             print("location:: (location)")
             DataManager.shared.currentCoordinate = locations.first?.coordinate
-            
         }
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print("error:: (error)")
-        
+        print("error:: (error)")        
     }
     
 }

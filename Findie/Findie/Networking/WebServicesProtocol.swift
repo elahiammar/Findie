@@ -13,5 +13,4 @@ typealias CompletionHandler = (NSMutableArray?, Error?) -> Void
 
 protocol WebServicesProtocol {
     func searchLocation(with locationName: String, completionHandler: @escaping CompletionHandler)
-    
 }

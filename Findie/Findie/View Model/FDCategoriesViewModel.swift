@@ -20,7 +20,6 @@ class FDCategoriesViewModel {
         for (titleName, imageName) in Constants.categoriesDictionary {
             let category = FDCategory.init(titleName: titleName, imageName: imageName)
             categoriesArray.add(category)
-            
         }
     }
 }

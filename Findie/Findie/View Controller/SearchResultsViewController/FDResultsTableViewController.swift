@@ -20,20 +20,17 @@ class FDResultsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-        
     }
 
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
     }
     
     
     func setupTableView() {
         tableView.tableFooterView = UIView(frame: .zero)
         tableView.register(FDSearchResultsTableViewCell.self, forCellReuseIdentifier: "FDSearchResultsTableViewCell")
-        
     }
     
     // MARK: - Table view data source

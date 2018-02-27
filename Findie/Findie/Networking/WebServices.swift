@@ -12,7 +12,7 @@ import CoreLocation
 struct WebServices: WebServicesProtocol {
     // Search Location
     func searchLocation(with locationName: String, completionHandler: @escaping CompletionHandler) {
-        
-        
+    
     }
+    
 }

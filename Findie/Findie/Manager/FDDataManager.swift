@@ -10,11 +10,11 @@ import Foundation
 import CoreLocation
 
 final class DataManager {
-    
+    // MARK: - Properties
     static let shared = DataManager()
     var currentCoordinate: CLLocationCoordinate2D!
     
+    // MARK: - Functions
     private init() {}
-
     
 }
