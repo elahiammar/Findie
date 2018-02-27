@@ -24,9 +24,7 @@ class FDResultsViewModel {
     func callWebService() {
         webService.searchLocation(with: "Lahore") { (dataArray, error) in
             
-            
         }
-        
     }
     
 }
