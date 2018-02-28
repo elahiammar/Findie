@@ -16,8 +16,8 @@ class FDCategoriesCollectionViewController: UICollectionViewController, UICollec
     // MARK: - Properties
     var searchController: FDSearchController!
     var resultsViewController: FDResultsTableViewController = FDResultsTableViewController()
-    var viewModel: FDCategoriesViewModel = FDCategoriesViewModel()
-    private let screenSize: CGSize = UIScreen.main.bounds.size
+    fileprivate var viewModel: FDCategoriesViewModel = FDCategoriesViewModel()
+    let screenSize: CGSize = UIScreen.main.bounds.size
     let locationManager = CLLocationManager()
     
     // MARK: - Life Cycle
@@ -58,22 +58,24 @@ class FDCategoriesCollectionViewController: UICollectionViewController, UICollec
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
     }
-
-    /*
+    
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "resultSegue" {
+            // Get selected cell indexPath and find location according to selected item name
+            let indexPath = collectionView?.indexPath(for: sender as! FDCategoriesCollectionViewCell)
+            let destinationViewController = segue.destination as! FDResultsTableViewController
+            let slectedItemName = viewModel.selectedItemName(with: indexPath!.item)
+            destinationViewController.searchLocation(with: slectedItemName)
+        }
     }
-    */
 
+ 
     // MARK: UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
-        
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -82,7 +84,7 @@ class FDCategoriesCollectionViewController: UICollectionViewController, UICollec
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! FDCategoriesCollectionViewCell
-        let category: FDCategory = viewModel.categoriesArray[indexPath.row] as! FDCategory
+        let category: FDCategory = viewModel.categoriesArray[indexPath.row]
         // Configure the cell
         cell.confiureCellWith(category: category)
         return cell
@@ -147,13 +149,12 @@ extension FDCategoriesCollectionViewController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if locations.first != nil {
-            print("location:: (location)")
             DataManager.shared.currentCoordinate = locations.first?.coordinate
         }
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print("error:: (error)")        
+        print("error:: \(error)")
     }
     
 }

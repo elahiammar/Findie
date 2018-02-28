@@ -13,7 +13,7 @@ class FDResultsTableViewController: UITableViewController {
 
     // MARK: - Properties
     
-    var viewModel: FDResultsViewModel = FDResultsViewModel(intWebServices: WebServices())
+    fileprivate var viewModel: FDResultsViewModel = FDResultsViewModel(intWebServices: WebServices())
     
     // MARK: - Life Cycle
     
@@ -27,21 +27,26 @@ class FDResultsTableViewController: UITableViewController {
         super.viewDidAppear(animated)
     }
     
+    // MARK: - Private Functions
     
-    func setupTableView() {
+     func setupTableView() {
         tableView.tableFooterView = UIView(frame: .zero)
         tableView.register(FDSearchResultsTableViewCell.self, forCellReuseIdentifier: "FDSearchResultsTableViewCell")
+    }
+    
+    // MARK: - Public Functions
+    
+    func searchLocation(with name: String) {
+        viewModel.callWebService(with: name)
     }
     
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return 1
     }
 

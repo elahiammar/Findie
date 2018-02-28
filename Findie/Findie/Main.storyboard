@@ -83,7 +83,7 @@
                                 <connections>
                                     <outlet property="iconImageView" destination="kxp-9b-XHb" id="HTa-Dn-P1N"/>
                                     <outlet property="titleLabel" destination="e2U-xq-X23" id="dNF-O1-ld3"/>
-                                    <segue destination="f8X-iW-wAk" kind="show" id="MST-I8-PCd"/>
+                                    <segue destination="f8X-iW-wAk" kind="show" identifier="resultSegue" id="MST-I8-PCd"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -107,24 +107,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FDSearchResultsTableViewCell" textLabel="o9k-xX-Bk9" detailTextLabel="l9B-ru-fko" rowHeight="72" style="IBUITableViewCellStyleValue1" id="xeI-EC-O30" customClass="FDSearchResultsTableViewCell" customModule="Findie" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FDSearchResultsTableViewCell" textLabel="o9k-xX-Bk9" detailTextLabel="l9B-ru-fko" rowHeight="72" style="IBUITableViewCellStyleSubtitle" id="xeI-EC-O30" customClass="FDSearchResultsTableViewCell" customModule="Findie" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="55.333333333333336" width="375" height="72"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xeI-EC-O30" id="aZQ-xw-YeV">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="71.666666666666671"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="o9k-xX-Bk9">
-                                            <rect key="frame" x="15" y="26" width="33.333333333333336" height="20.333333333333332"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="o9k-xX-Bk9">
+                                            <rect key="frame" x="15" y="15.999999999999998" width="33.333333333333336" height="20.333333333333332"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0039215686269999999" green="0.69803921570000005" blue="0.58039215690000001" alpha="0.97808754279999999" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="l9B-ru-fko">
-                                            <rect key="frame" x="300.33333333333331" y="26" width="58.666666666666664" height="20.333333333333332"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="l9B-ru-fko">
+                                            <rect key="frame" x="14.999999999999996" y="39.333333333333329" width="43.666666666666664" height="14.333333333333334"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" red="0.0039215686269999999" green="0.69803921570000005" blue="0.58039215690000001" alpha="0.97808754279999999" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
