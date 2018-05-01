@@ -16,7 +16,7 @@ struct WebServices: WebServicesProtocol {
         let coordinate = DataManager.shared.currentCoordinate
         let request = MKLocalSearchRequest()
         request.naturalLanguageQuery = locationName
-        request.region = MKCoordinateRegionMakeWithDistance(coordinate!, 5000, 5000)
+        request.region = MKCoordinateRegionMakeWithDistance(coordinate!, 10000, 10000)
         
         let search = MKLocalSearch(request: request)
         search.start { (response, error) in

@@ -20,7 +20,7 @@ class FDResultsViewModel {
         webService = webServices
     }
     
-    func callWebService(with locationName: String) {
+    func searchLocation(with locationName: String) {
         webService.searchLocation(with: locationName) { (dataArray, error) in
             
         }

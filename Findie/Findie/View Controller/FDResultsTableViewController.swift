@@ -36,8 +36,8 @@ class FDResultsTableViewController: UITableViewController {
     
     // MARK: - Public Functions
     
-    func searchLocation(with name: String) {
-        viewModel.callWebService(with: name)
+    func searchLocation(with locationName: String) {
+        viewModel.searchLocation(with: locationName)
     }
     
     // MARK: - Table view data source
