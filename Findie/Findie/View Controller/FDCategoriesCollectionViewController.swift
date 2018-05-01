@@ -7,25 +7,23 @@
 //
 
 import UIKit
-import CoreLocation
 
 private let reuseIdentifier = "FDCategoriesCollectionViewCell"
 
 class FDCategoriesCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     // MARK: - Properties
-    var searchController: FDSearchController!
-    var resultsViewController: FDResultsTableViewController = FDResultsTableViewController()
-    fileprivate var viewModel: FDCategoriesViewModel = FDCategoriesViewModel()
-    let screenSize: CGSize = UIScreen.main.bounds.size
-    let locationManager = CLLocationManager()
     
+    var searchController: FDSearchController!
+    let screenSize: CGSize = UIScreen.main.bounds.size
+    fileprivate var viewModel: FDCategoriesViewModel = FDCategoriesViewModel()
+    var resultsViewController: FDResultsTableViewController = FDResultsTableViewController()
+   
     // MARK: - Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
-        setupLocation()
         
         // Set FromSafeArea for UICollectionViewFlowLayoutSectionInsetReference
         if let flowLayout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
@@ -50,13 +48,6 @@ class FDCategoriesCollectionViewController: UICollectionViewController, UICollec
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
         definesPresentationContext = true
-    }
-    
-    func setupLocation() {
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.requestWhenInUseAuthorization()
-        locationManager.startUpdatingLocation()
     }
     
     // MARK: - Navigation
@@ -134,27 +125,4 @@ class FDCategoriesCollectionViewController: UICollectionViewController, UICollec
         let height = width
         return CGSize(width: width, height: height)
     }
-}
-
-// MARK: - Extension FDResultsTableViewController
-
-extension FDCategoriesCollectionViewController: CLLocationManagerDelegate {
-    
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        if status == .authorizedWhenInUse {
-            locationManager.requestLocation()
-            
-        }
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if locations.first != nil {
-            DataManager.shared.currentCoordinate = locations.first?.coordinate
-        }
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print("error:: \(error)")
-    }
-    
 }
