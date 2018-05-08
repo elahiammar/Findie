@@ -18,13 +18,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         var initialViewController: UIViewController!
-        if LocationManager.shared.currentCoordinate != nil {
+       
+        if LocationManager.shared.isLocationPermissionGranted() {
             // Move to categories controller
             initialViewController = storyboard.instantiateViewController(withIdentifier: "CategoriesCollectionViewController") as! CategoriesCollectionViewController
             
         } else {
             // Move to enable location controller
-            initialViewController = storyboard.instantiateViewController(withIdentifier: "CategoriesCollectionViewController") as! CategoriesCollectionViewController
+            initialViewController = storyboard.instantiateViewController(withIdentifier: "EnableLocationViewController") as! EnableLocationViewController
             
         }
         self.window?.rootViewController = initialViewController
