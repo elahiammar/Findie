@@ -1,5 +1,5 @@
 //
-//  FDCategory.swift
+//  Category.swift
 //  Findie
 //
 //  Created by elahiammar on 28/09/2017.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-class FDCategory: NSObject {
+class Category: NSObject {
     var titleName: String!
     var imageName: String!
     

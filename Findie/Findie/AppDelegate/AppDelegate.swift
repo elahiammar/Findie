@@ -15,7 +15,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        var initialViewController: UIViewController!
+        if LocationManager.shared.currentCoordinate != nil {
+            // Move to categories controller
+            initialViewController = storyboard.instantiateViewController(withIdentifier: "CategoriesCollectionViewController") as! CategoriesCollectionViewController
+            
+        } else {
+            // Move to enable location controller
+            initialViewController = storyboard.instantiateViewController(withIdentifier: "CategoriesCollectionViewController") as! CategoriesCollectionViewController
+            
+        }
+        self.window?.rootViewController = initialViewController
+        self.window?.makeKeyAndVisible()
+        
         return true
     }
 

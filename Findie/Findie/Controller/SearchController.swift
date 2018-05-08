@@ -1,5 +1,5 @@
 //
-//  FDSearchController.swift
+//  SearchController.swift
 //  Findie
 //
 //  Created by elahiammar on 02/10/2017.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FDSearchController: UISearchController {
+class SearchController: UISearchController {
 
     override init(searchResultsController: UIViewController?) {
         super.init(searchResultsController: searchResultsController)

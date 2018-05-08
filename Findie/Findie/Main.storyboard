@@ -13,7 +13,7 @@
         <!--Findie-->
         <scene sceneID="fqp-E1-77b">
             <objects>
-                <collectionViewController storyboardIdentifier="FDCategoriesCollectionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2eT-bF-BK5" customClass="FDCategoriesCollectionViewController" customModule="Findie" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="CategoriesCollectionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2eT-bF-BK5" customClass="CategoriesCollectionViewController" customModule="Findie" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="LNE-XI-OKT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,7 +26,7 @@
                             <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="FDCategoriesCollectionViewCell" reuseIdentifier="FDCategoriesCollectionViewCell" id="Wzv-3W-jP7" customClass="FDCategoriesCollectionViewCell" customModule="Findie" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="CategoriesCollectionViewCell" reuseIdentifier="CategoriesCollectionViewCell" id="Wzv-3W-jP7" customClass="CategoriesCollectionViewCell" customModule="Findie" customModuleProvider="target">
                                 <rect key="frame" x="10" y="10" width="120" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -101,13 +101,13 @@
         <!--Places-->
         <scene sceneID="oCO-tW-3SD">
             <objects>
-                <tableViewController storyboardIdentifier="FDResultsTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="f8X-iW-wAk" customClass="FDResultsTableViewController" customModule="Findie" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ResultsTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="f8X-iW-wAk" customClass="ResultsTableViewController" customModule="Findie" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="PEg-co-8Lu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FDSearchResultsTableViewCell" textLabel="o9k-xX-Bk9" detailTextLabel="l9B-ru-fko" rowHeight="72" style="IBUITableViewCellStyleSubtitle" id="xeI-EC-O30" customClass="FDSearchResultsTableViewCell" customModule="Findie" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchResultsTableViewCell" textLabel="o9k-xX-Bk9" detailTextLabel="l9B-ru-fko" rowHeight="72" style="IBUITableViewCellStyleSubtitle" id="xeI-EC-O30" customClass="SearchResultsTableViewCell" customModule="Findie" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="55.333333333333343" width="375" height="72"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xeI-EC-O30" id="aZQ-xw-YeV">
@@ -150,7 +150,7 @@
         <!--Map-->
         <scene sceneID="8Wh-4t-C1f">
             <objects>
-                <viewController storyboardIdentifier="FDMapViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gpN-mj-Wob" customClass="FDMapViewController" customModule="Findie" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MapViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gpN-mj-Wob" customClass="MapViewController" customModule="Findie" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wxL-zd-UKe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -203,50 +203,53 @@
         <!--Enable Location-->
         <scene sceneID="omw-eV-kXk">
             <objects>
-                <viewController storyboardIdentifier="FDEnableLocationViewController" title="LaunchScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Nob-Cc-Y7y" userLabel="Enable Location" customClass="FDEnableLocationViewController" customModule="Findie" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EnableLocationViewController" title="LaunchScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Nob-Cc-Y7y" userLabel="Enable Location" customClass="EnableLocationViewController" customModule="Findie" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oW2-ST-Nug">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchImage" translatesAutoresizingMaskIntoConstraints="NO" id="chN-Ew-GEH">
-                                <rect key="frame" x="87" y="306" width="200" height="200"/>
+                                <rect key="frame" x="87.666666666666686" y="306" width="200" height="200"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="njP-Af-jh6">
-                                <rect key="frame" x="77" y="703" width="220" height="45"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="SK9-UM-0RL"/>
-                                    <constraint firstAttribute="width" constant="220" id="zhU-AU-SsU"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                <state key="normal" title="ENABLE LOCATION">
-                                    <color key="titleColor" red="0.0039215686269999999" green="0.69803921570000005" blue="0.58039215690000001" alpha="0.97808754279999999" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="enableLocationTapped:" destination="Nob-Cc-Y7y" eventType="touchUpInside" id="CE2-zC-Rur"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Accessing your location allow us to find places near you." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GcM-mZ-Edt">
-                                <rect key="frame" x="50" y="642.33333333333337" width="275" height="40.666666666666629"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="M1u-g1-tKo">
+                                <rect key="frame" x="40" y="623.33333333333337" width="295" height="114.66666666666663"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Accessing your location allow us to find places near you." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GcM-mZ-Edt">
+                                        <rect key="frame" x="8.6666666666666572" y="0.0" width="278" height="40.666666666666664"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="njP-Af-jh6">
+                                        <rect key="frame" x="47.666666666666686" y="70.666666666666629" width="200" height="44"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="NES-tV-37q"/>
+                                            <constraint firstAttribute="width" constant="200" id="ROu-de-DBZ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <state key="normal" title="ENABLE LOCATION">
+                                            <color key="titleColor" red="0.0039215686269999999" green="0.69803921570000005" blue="0.58039215690000001" alpha="0.97808754279999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="enableLocationTapped:" destination="Nob-Cc-Y7y" eventType="touchUpInside" id="CE2-zC-Rur"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.0039215686269999999" green="0.69803921570000005" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="3BU-Sk-Gpi" firstAttribute="trailing" secondItem="GcM-mZ-Edt" secondAttribute="trailing" constant="50" id="1lI-Wh-ij0"/>
                             <constraint firstItem="chN-Ew-GEH" firstAttribute="centerY" secondItem="oW2-ST-Nug" secondAttribute="centerY" id="3cw-Uq-euj"/>
-                            <constraint firstItem="GcM-mZ-Edt" firstAttribute="leading" secondItem="3BU-Sk-Gpi" secondAttribute="leading" constant="50" id="KT0-VS-N3R"/>
-                            <constraint firstItem="njP-Af-jh6" firstAttribute="centerX" secondItem="oW2-ST-Nug" secondAttribute="centerX" id="Msh-Uz-Hfi"/>
-                            <constraint firstItem="3BU-Sk-Gpi" firstAttribute="bottom" secondItem="njP-Af-jh6" secondAttribute="bottom" constant="30" id="XF3-Xe-gWC"/>
+                            <constraint firstItem="3BU-Sk-Gpi" firstAttribute="bottom" secondItem="M1u-g1-tKo" secondAttribute="bottom" constant="40" id="KRf-Jw-Oh2"/>
+                            <constraint firstItem="M1u-g1-tKo" firstAttribute="leading" secondItem="oW2-ST-Nug" secondAttribute="leading" constant="40" id="Z9Z-d0-mCp"/>
                             <constraint firstItem="chN-Ew-GEH" firstAttribute="centerX" secondItem="3BU-Sk-Gpi" secondAttribute="centerX" id="cwK-5N-b1x"/>
-                            <constraint firstItem="njP-Af-jh6" firstAttribute="top" secondItem="GcM-mZ-Edt" secondAttribute="bottom" constant="20" id="vpm-Xn-rMQ"/>
+                            <constraint firstAttribute="trailing" secondItem="M1u-g1-tKo" secondAttribute="trailing" constant="40" id="en5-gN-GiO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3BU-Sk-Gpi"/>
                     </view>

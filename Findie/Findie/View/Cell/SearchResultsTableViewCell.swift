@@ -1,5 +1,5 @@
 //
-//  FDSearchResultsTableViewCell.swift
+//  SearchResultsTableViewCell.swift
 //  Findie
 //
 //  Created by elahiammar on 26/11/2017.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FDSearchResultsTableViewCell: UITableViewCell {
+class SearchResultsTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()

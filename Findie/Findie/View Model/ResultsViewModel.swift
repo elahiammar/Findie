@@ -1,5 +1,5 @@
 //
-//  FDResultsViewModel.swift
+//  ResultsViewModel.swift
 //  Findie
 //
 //  Created by elahiammar on 27/02/2018.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-class FDResultsViewModel {
+class ResultsViewModel {
 
     // MARK: Properties
     

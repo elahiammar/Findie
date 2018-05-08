@@ -1,5 +1,5 @@
 //
-//  FDConstants.swift
+//  Constants.swift
 //  Findie
 //
 //  Created by elahiammar on 24/09/2017.

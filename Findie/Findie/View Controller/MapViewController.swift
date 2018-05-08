@@ -1,5 +1,5 @@
 //
-//  FDMapViewController.swift
+//  MapViewController.swift
 //  Findie
 //
 //  Created by elahiammar on 31/12/2017.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FDMapViewController: UIViewController {
+class MapViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

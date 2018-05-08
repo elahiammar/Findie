@@ -1,5 +1,5 @@
 //
-//  FDEnableLocationViewController.swift
+//  EnableLocationViewController.swift
 //  Findie
 //
 //  Created by elahiammar on 01/05/2018.
@@ -9,7 +9,7 @@
 import UIKit
 import CoreLocation
 
-class FDEnableLocationViewController: UIViewController, CLLocationManagerDelegate {
+class EnableLocationViewController: UIViewController, CLLocationManagerDelegate {
 
     // MARK: - Properties
     
@@ -29,7 +29,7 @@ class FDEnableLocationViewController: UIViewController, CLLocationManagerDelegat
     // MARK: - Actions
     
     @IBAction func enableLocationTapped(_ sender: UIButton) {
-        if DataManager.shared.currentCoordinate != nil {
+        if LocationManager.shared.currentCoordinate != nil {
             moveToCategoriesViewController()
             
         } else {
@@ -41,7 +41,7 @@ class FDEnableLocationViewController: UIViewController, CLLocationManagerDelegat
     
     private func moveToCategoriesViewController() {
         // Move to categories controller
-        let categoriesViewController = self.storyboard?.instantiateViewController(withIdentifier: "FDCategoriesCollectionViewController") as! FDCategoriesCollectionViewController
+        let categoriesViewController = self.storyboard?.instantiateViewController(withIdentifier: "CategoriesCollectionViewController") as! CategoriesCollectionViewController
         let navigationController = UINavigationController(rootViewController: categoriesViewController)
         //        navigationController.navigationBar.prefersLargeTitles = true
 //        navigationController.navigationBar.prefersLargeTitles = true
@@ -81,7 +81,7 @@ class FDEnableLocationViewController: UIViewController, CLLocationManagerDelegat
     
     internal func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if locations.first != nil {
-            DataManager.shared.currentCoordinate = locations.first?.coordinate
+            LocationManager.shared.currentCoordinate = locations.first?.coordinate
         }
     }
     

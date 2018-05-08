@@ -13,7 +13,7 @@ import CoreLocation
 struct WebServices: WebServicesProtocol {
     // Search Location
     func searchLocation(with locationName: String, completionHandler: @escaping CompletionHandler) {
-        let coordinate = DataManager.shared.currentCoordinate
+        let coordinate = LocationManager.shared.currentCoordinate
         let request = MKLocalSearchRequest()
         request.naturalLanguageQuery = locationName
         request.region = MKCoordinateRegionMakeWithDistance(coordinate!, 10000, 10000)

@@ -1,5 +1,5 @@
 //
-//  FDResultsTableViewController.swift
+//  ResultsTableViewController.swift
 //  Findie
 //
 //  Created by elahiammar on 26/11/2017.
@@ -9,11 +9,11 @@
 import UIKit
 import MapKit
 
-class FDResultsTableViewController: UITableViewController {
+class ResultsTableViewController: UITableViewController {
 
     // MARK: - Properties
     
-    fileprivate var viewModel: FDResultsViewModel = FDResultsViewModel(intWebServices: WebServices())
+    fileprivate var viewModel: ResultsViewModel = ResultsViewModel(intWebServices: WebServices())
     
     // MARK: - Life Cycle
     
@@ -31,7 +31,7 @@ class FDResultsTableViewController: UITableViewController {
     
      func setupTableView() {
         tableView.tableFooterView = UIView(frame: .zero)
-        tableView.register(FDSearchResultsTableViewCell.self, forCellReuseIdentifier: "FDSearchResultsTableViewCell")
+        tableView.register(SearchResultsTableViewCell.self, forCellReuseIdentifier: "SearchResultsTableViewCell")
     }
     
     // MARK: - Public Functions
@@ -51,7 +51,7 @@ class FDResultsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "FDSearchResultsTableViewCell", for: indexPath) as! FDSearchResultsTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SearchResultsTableViewCell", for: indexPath) as! SearchResultsTableViewCell
         return cell
         
     }

@@ -1,5 +1,5 @@
 //
-//  FDCategoriesCollectionViewController.swift
+//  CategoriesCollectionViewController.swift
 //  Findie
 //
 //  Created by elahiammar on 21/09/2017.
@@ -8,16 +8,16 @@
 
 import UIKit
 
-private let reuseIdentifier = "FDCategoriesCollectionViewCell"
+private let reuseIdentifier = "CategoriesCollectionViewCell"
 
-class FDCategoriesCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+class CategoriesCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     // MARK: - Properties
     
-    var searchController: FDSearchController!
+    var searchController: SearchController!
     let screenSize: CGSize = UIScreen.main.bounds.size
-    fileprivate var viewModel: FDCategoriesViewModel = FDCategoriesViewModel()
-    var resultsViewController: FDResultsTableViewController = FDResultsTableViewController()
+    fileprivate var viewModel: CategoriesViewModel = CategoriesViewModel()
+    var resultsViewController: ResultsTableViewController = ResultsTableViewController()
    
     // MARK: - Life Cycle
     
@@ -44,7 +44,7 @@ class FDCategoriesCollectionViewController: UICollectionViewController, UICollec
     // MARK: - Functions
     
     func setupNavigationBar() {
-        searchController = FDSearchController(searchResultsController: resultsViewController)
+        searchController = SearchController(searchResultsController: resultsViewController)
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
         definesPresentationContext = true
@@ -55,8 +55,8 @@ class FDCategoriesCollectionViewController: UICollectionViewController, UICollec
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "resultSegue" {
             // Get selected cell indexPath and find location according to selected item name
-            let indexPath = collectionView?.indexPath(for: sender as! FDCategoriesCollectionViewCell)
-            let destinationViewController = segue.destination as! FDResultsTableViewController
+            let indexPath = collectionView?.indexPath(for: sender as! CategoriesCollectionViewCell)
+            let destinationViewController = segue.destination as! ResultsTableViewController
             let slectedItemName = viewModel.selectedItemName(with: indexPath!.item)
             destinationViewController.searchLocation(with: slectedItemName)
         }
@@ -74,8 +74,8 @@ class FDCategoriesCollectionViewController: UICollectionViewController, UICollec
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! FDCategoriesCollectionViewCell
-        let category: FDCategory = viewModel.categoriesArray[indexPath.row]
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CategoriesCollectionViewCell
+        let category: Category = viewModel.categoriesArray[indexPath.row]
         // Configure the cell
         cell.confiureCellWith(category: category)
         return cell

@@ -1,5 +1,5 @@
 //
-//  FDCategoriesViewModel.swift
+//  CategoriesViewModel.swift
 //  Findie
 //
 //  Created by elahiammar on 24/09/2017.
@@ -8,17 +8,17 @@
 
 import Foundation
 
-class FDCategoriesViewModel {
+class CategoriesViewModel {
     // MARK: Properties
     
-    var categoriesArray = [FDCategory]()
+    var categoriesArray = [Category]()
     
     // MARK: Functions
 
     func initializeCategoriesArray() {
         // Prepare categoriesArray from Dictionary
         for (titleName, imageName) in Constants.categoriesDictionary {
-            let category = FDCategory.init(titleName: titleName, imageName: imageName)
+            let category = Category.init(titleName: titleName, imageName: imageName)
             categoriesArray.append(category)
         }
     }

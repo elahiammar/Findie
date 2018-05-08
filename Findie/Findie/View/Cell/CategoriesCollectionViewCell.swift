@@ -1,5 +1,5 @@
 //
-//  FDCategoriesCollectionViewCell.swift
+//  CategoriesCollectionViewCell.swift
 //  Findie
 //
 //  Created by elahiammar on 21/09/2017.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FDCategoriesCollectionViewCell: UICollectionViewCell {
+class CategoriesCollectionViewCell: UICollectionViewCell {
     // MARK: - Outlets
     
     @IBOutlet weak var titleLabel: UILabel!
@@ -16,7 +16,7 @@ class FDCategoriesCollectionViewCell: UICollectionViewCell {
 
     // MARK: - Functions
     
-    func confiureCellWith(category: FDCategory) {
+    func confiureCellWith(category: Category) {
         // Configure cell
         titleLabel.text = category.titleName
         iconImageView.image = UIImage(named: category.imageName)
