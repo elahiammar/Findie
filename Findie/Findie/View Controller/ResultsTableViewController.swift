@@ -37,7 +37,13 @@ class ResultsTableViewController: UITableViewController {
     // MARK: - Public Functions
     
     func searchLocation(with locationName: String) {
-        viewModel.searchLocation(with: locationName)
+        if (LocationManager.shared.getCurrentCoordinate() != nil) {
+            viewModel.searchLocation(with: locationName)
+            
+        } else {
+            // Show Error
+            
+        }
     }
     
     // MARK: - Table view data source
@@ -47,7 +53,7 @@ class ResultsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 0
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

@@ -15,7 +15,7 @@ final class LocationManager: NSObject, CLLocationManagerDelegate {
     
     static let shared = LocationManager()
     private let locationManager = CLLocationManager()
-    private var currentCoordinate: CLLocationCoordinate2D!
+    private var currentCoordinate: CLLocationCoordinate2D?
     
     // MARK: - Life Cycle
     
@@ -23,7 +23,7 @@ final class LocationManager: NSObject, CLLocationManagerDelegate {
     
     // MARK: - Public Functions
     
-    func getCurrentCoordinate() -> CLLocationCoordinate2D {
+    func getCurrentCoordinate() -> CLLocationCoordinate2D? {
         return self.currentCoordinate
     }
     

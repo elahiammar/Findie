@@ -15,22 +15,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        var initialViewController: UIViewController!
-       
-        if LocationManager.shared.isLocationPermissionGranted() {
-            // Move to categories controller
-            initialViewController = storyboard.instantiateViewController(withIdentifier: "CategoriesCollectionViewController") as! CategoriesCollectionViewController
-            
-        } else {
-            // Move to enable location controller
-            initialViewController = storyboard.instantiateViewController(withIdentifier: "EnableLocationViewController") as! EnableLocationViewController
-            
-        }
-        self.window?.rootViewController = initialViewController
-        self.window?.makeKeyAndVisible()
-        
         return true
     }
 

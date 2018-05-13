@@ -24,14 +24,14 @@ class CategoriesCollectionViewController: UICollectionViewController, UICollecti
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
+        LocationManager.shared.setupLocation()
         
         // Set FromSafeArea for UICollectionViewFlowLayoutSectionInsetReference
         if let flowLayout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
                 flowLayout.sectionInsetReference = .fromSafeArea
             
         }
-        // Initalize categories array to populate data
-        viewModel.initializeCategoriesArray()
+        viewModel.initialize()
         collectionView?.reloadData()
         
     }

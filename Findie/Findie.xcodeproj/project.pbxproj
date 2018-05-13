@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		271E36351F7D73FE00A7AFF3 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271E36341F7D73FE00A7AFF3 /* Category.swift */; };
-		2720CD5A2098DB7C001A08B0 /* EnableLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2720CD592098DB7C001A08B0 /* EnableLocationViewController.swift */; };
 		2725D9121F77FBFD005466FA /* CategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2725D9111F77FBFD005466FA /* CategoriesViewModel.swift */; };
 		2725D9171F7813D7005466FA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2725D9161F7813D7005466FA /* Constants.swift */; };
 		276A9A7B1F71BADB00D50312 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 276A9A7A1F71BADB00D50312 /* Assets.xcassets */; };
@@ -30,7 +29,6 @@
 
 /* Begin PBXFileReference section */
 		271E36341F7D73FE00A7AFF3 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
-		2720CD592098DB7C001A08B0 /* EnableLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnableLocationViewController.swift; sourceTree = "<group>"; };
 		2725D9111F77FBFD005466FA /* CategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewModel.swift; sourceTree = "<group>"; };
 		2725D9161F7813D7005466FA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		276A9A701F71BADB00D50312 /* Findie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Findie.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -189,7 +187,6 @@
 			children = (
 				27ECF01E2045DF0F00449770 /* MapViewController.swift */,
 				27ECF0202045DF0F00449770 /* ResultsTableViewController.swift */,
-				2720CD592098DB7C001A08B0 /* EnableLocationViewController.swift */,
 				27ECF01F2045DF0F00449770 /* CategoriesCollectionViewController.swift */,
 			);
 			path = "View Controller";
@@ -282,7 +279,6 @@
 				27AD44BA203E033B00F94600 /* WebServicesProtocol.swift in Sources */,
 				27ECF0212045DF0F00449770 /* MapViewController.swift in Sources */,
 				2725D9171F7813D7005466FA /* Constants.swift in Sources */,
-				2720CD5A2098DB7C001A08B0 /* EnableLocationViewController.swift in Sources */,
 				27ECF0232045DF0F00449770 /* ResultsTableViewController.swift in Sources */,
 				27ECF0222045DF0F00449770 /* CategoriesCollectionViewController.swift in Sources */,
 				271E36351F7D73FE00A7AFF3 /* Category.swift in Sources */,

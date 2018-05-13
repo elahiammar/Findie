@@ -15,7 +15,12 @@ class CategoriesViewModel {
     
     // MARK: Functions
 
-    func initializeCategoriesArray() {
+    func initialize() {
+        // Location
+        if LocationManager.shared.getCurrentCoordinate() == nil {
+            LocationManager.shared.setupLocation()
+            
+        }
         // Prepare categoriesArray from Dictionary
         for (titleName, imageName) in Constants.categoriesDictionary {
             let category = Category.init(titleName: titleName, imageName: imageName)
