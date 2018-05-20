@@ -25,6 +25,7 @@
 		27ECF0252045DF3D00449770 /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ECF0242045DF3D00449770 /* SearchController.swift */; };
 		27ECF0282045DF6800449770 /* SearchResultsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ECF0262045DF6700449770 /* SearchResultsTableViewCell.swift */; };
 		27ECF0292045DF6800449770 /* CategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ECF0272045DF6700449770 /* CategoriesCollectionViewCell.swift */; };
+		C87883C4A7245D759E567478 /* Pods_Findie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE68196DD69D7B8FB0754022 /* Pods_Findie.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,9 @@
 		27ECF0242045DF3D00449770 /* SearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
 		27ECF0262045DF6700449770 /* SearchResultsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsTableViewCell.swift; sourceTree = "<group>"; };
 		27ECF0272045DF6700449770 /* CategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
+		940B8885EB8217241FD69770 /* Pods-Findie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Findie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Findie/Pods-Findie.debug.xcconfig"; sourceTree = "<group>"; };
+		BE68196DD69D7B8FB0754022 /* Pods_Findie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Findie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D05C9CCC9A5E6BB582B34698 /* Pods-Findie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Findie.release.xcconfig"; path = "Pods/Target Support Files/Pods-Findie/Pods-Findie.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27A7948A2028DD2100E335DC /* MapKit.framework in Frameworks */,
+				C87883C4A7245D759E567478 /* Pods_Findie.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +81,7 @@
 				276A9A721F71BADB00D50312 /* Findie */,
 				276A9A711F71BADB00D50312 /* Products */,
 				27A794882028DD2100E335DC /* Frameworks */,
+				5C2E887E2F4592E47E0981AA /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -161,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				27A794892028DD2100E335DC /* MapKit.framework */,
+				BE68196DD69D7B8FB0754022 /* Pods_Findie.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -200,6 +207,15 @@
 			path = Manager;
 			sourceTree = "<group>";
 		};
+		5C2E887E2F4592E47E0981AA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				940B8885EB8217241FD69770 /* Pods-Findie.debug.xcconfig */,
+				D05C9CCC9A5E6BB582B34698 /* Pods-Findie.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -207,9 +223,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 276A9A821F71BADB00D50312 /* Build configuration list for PBXNativeTarget "Findie" */;
 			buildPhases = (
+				6346F0E881520197B82CE0FD /* [CP] Check Pods Manifest.lock */,
 				276A9A6C1F71BADB00D50312 /* Sources */,
 				276A9A6D1F71BADB00D50312 /* Frameworks */,
 				276A9A6E1F71BADB00D50312 /* Resources */,
+				EE78288A1195138581A08023 /* [CP] Embed Pods Frameworks */,
+				B04BD4CC4E11EE335FBBFD80 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -268,6 +287,62 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6346F0E881520197B82CE0FD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Findie-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B04BD4CC4E11EE335FBBFD80 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Findie/Pods-Findie-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE78288A1195138581A08023 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Findie/Pods-Findie-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Findie/Pods-Findie-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		276A9A6C1F71BADB00D50312 /* Sources */ = {
@@ -412,6 +487,7 @@
 		};
 		276A9A831F71BADB00D50312 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 940B8885EB8217241FD69770 /* Pods-Findie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = W7FZ2R7QG2;
@@ -427,6 +503,7 @@
 		};
 		276A9A841F71BADB00D50312 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D05C9CCC9A5E6BB582B34698 /* Pods-Findie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = W7FZ2R7QG2;

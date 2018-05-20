@@ -10,8 +10,15 @@ import Foundation
 
 class CategoriesViewModel {
     // MARK: Properties
-    
-    var categoriesArray = [Category]()
+    private var categoriesArray = [Category]()
+    private let categoriesDictionary: Dictionary<String, String> = ["Hotel": "hotel", "Restaurant": "restaurant",
+                                                                    "Coffee": "coffee", "Gas Station": "gas",
+                                                                    "Bus Station": "bus-station", "Clothing": "clothing",
+                                                                    "Salon": "salon", "Grocery": "supermarket",
+                                                                    "Hospital": "hospital", "Park": "park",
+                                                                    "Pharmacy": "pharmacy", "Parking": "parking",
+                                                                    "Library": "library", "Car Repair": "car-repair",
+                                                                    "Airport": "airport", "Train Station": "train", "Police": "police"]
     
     // MARK: Functions
 
@@ -22,7 +29,7 @@ class CategoriesViewModel {
             
         }
         // Prepare categoriesArray from Dictionary
-        for (titleName, imageName) in Constants.categoriesDictionary {
+        for (titleName, imageName) in categoriesDictionary {
             let category = Category.init(titleName: titleName, imageName: imageName)
             categoriesArray.append(category)
         }
