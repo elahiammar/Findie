@@ -97,7 +97,6 @@
 				27ECF0192045CCB400449770 /* Manager */,
 				276A9A8B1F72F49300D50312 /* Model */,
 				276A9A8E1F72F49300D50312 /* View */,
-				27DD218D1FE8B94400B45330 /* View Controller */,
 				276A9A901F72F49300D50312 /* View Model */,
 				276A9A8C1F72F49300D50312 /* Supporting Files */,
 				276A9A7A1F71BADB00D50312 /* Assets.xcassets */,
@@ -135,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				276A9A941F72F60E00D50312 /* Cell */,
+				27DD218D1FE8B94400B45330 /* ViewControllers */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -182,14 +182,14 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		27DD218D1FE8B94400B45330 /* View Controller */ = {
+		27DD218D1FE8B94400B45330 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				27ECF01E2045DF0F00449770 /* MapViewController.swift */,
 				27ECF0202045DF0F00449770 /* ResultsTableViewController.swift */,
 				27ECF01F2045DF0F00449770 /* CategoriesCollectionViewController.swift */,
 			);
-			path = "View Controller";
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		27ECF0192045CCB400449770 /* Manager */ = {
