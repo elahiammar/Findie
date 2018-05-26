@@ -60,7 +60,7 @@ class CategoriesCollectionViewController: UICollectionViewController {
     
     private func bindCategories() {
         viewModel.categories.bind(to: collectionView!.rx.items(cellIdentifier: "CategoriesCollectionViewCell", cellType: CategoriesCollectionViewCell.self)) { _, cateogry, cell in
-            cell.confiureCellWith(category: cateogry)
+            cell.confiureCell(with: cateogry)
             
         }.disposed(by: disposebag)
     }

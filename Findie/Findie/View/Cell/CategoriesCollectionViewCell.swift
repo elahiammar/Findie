@@ -16,10 +16,9 @@ class CategoriesCollectionViewCell: UICollectionViewCell {
 
     // MARK: - Functions
     
-    func confiureCellWith(category: Category) {
-        // Configure cell
+    func confiureCell(with category: Category) {
         titleLabel.text = category.titleName
         iconImageView.image = UIImage(named: category.imageName)
-        
     }
+    
 }
