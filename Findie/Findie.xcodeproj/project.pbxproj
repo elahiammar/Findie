@@ -192,9 +192,9 @@
 		27DD218D1FE8B94400B45330 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				27ECF01E2045DF0F00449770 /* MapViewController.swift */,
-				27ECF0202045DF0F00449770 /* ResultsTableViewController.swift */,
 				27ECF01F2045DF0F00449770 /* CategoriesCollectionViewController.swift */,
+				27ECF0202045DF0F00449770 /* ResultsTableViewController.swift */,
+				27ECF01E2045DF0F00449770 /* MapViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -251,7 +251,7 @@
 				TargetAttributes = {
 					276A9A6F1F71BADB00D50312 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = W7FZ2R7QG2;
+						DevelopmentTeam = ZR58BAQNQ9;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
@@ -490,12 +490,16 @@
 			baseConfigurationReference = 940B8885EB8217241FD69770 /* Pods-Findie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = W7FZ2R7QG2;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZR58BAQNQ9;
 				INFOPLIST_FILE = "$(SRCROOT)/Findie/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.silentmosque.app;
+				PRODUCT_BUNDLE_IDENTIFIER = com.findie.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
 			};
@@ -506,12 +510,17 @@
 			baseConfigurationReference = D05C9CCC9A5E6BB582B34698 /* Pods-Findie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = W7FZ2R7QG2;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZR58BAQNQ9;
 				INFOPLIST_FILE = "$(SRCROOT)/Findie/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.silentmosque.app;
+				PRODUCT_BUNDLE_IDENTIFIER = com.findie.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
 			};

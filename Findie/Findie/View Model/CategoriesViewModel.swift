@@ -6,11 +6,18 @@
 //  Copyright © 2017 elahiammar. All rights reserved.
 //
 
-import Foundation
+import RxSwift
+import RxCocoa
 
 class CategoriesViewModel {
+   
     // MARK: Properties
-    private var categoriesArray = [Category]()
+    
+    var categories: Observable<[Category]> {
+        return self.categoriesBehaviorRelay.asObservable()
+    }
+    
+    private var categoriesBehaviorRelay = BehaviorRelay<[Category]>(value: [])
     private let categoriesDictionary: Dictionary<String, String> = ["Hotel": "hotel", "Restaurant": "restaurant",
                                                                     "Coffee": "coffee", "Gas Station": "gas",
                                                                     "Bus Station": "bus-station", "Clothing": "clothing",
@@ -28,15 +35,19 @@ class CategoriesViewModel {
             LocationManager.shared.setupLocation()
             
         }
+
         // Prepare categoriesArray from Dictionary
+        var categoriesArray = [Category]()
         for (titleName, imageName) in categoriesDictionary {
             let category = Category.init(titleName: titleName, imageName: imageName)
             categoriesArray.append(category)
         }
+        categoriesBehaviorRelay.accept(categoriesArray)
     }
     
     func selectedItemName(with index: Int) -> String {
-        let selectedCategory = categoriesArray[index]
+        let selectedCategory = categoriesBehaviorRelay.value[index]
         return selectedCategory.titleName
     }
+
 }

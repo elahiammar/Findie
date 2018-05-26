@@ -87,10 +87,6 @@
                                 </connections>
                             </collectionViewCell>
                         </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="2eT-bF-BK5" id="wQV-0b-OfR"/>
-                            <outlet property="delegate" destination="2eT-bF-BK5" id="uDp-KK-18O"/>
-                        </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" title="Findie" id="uxs-P0-P1u"/>
                 </collectionViewController>
@@ -136,10 +132,6 @@
                                 </connections>
                             </tableViewCell>
                         </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="f8X-iW-wAk" id="b5p-Vg-TQ2"/>
-                            <outlet property="delegate" destination="f8X-iW-wAk" id="aav-Zg-OTh"/>
-                        </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Places" id="Bh8-Mw-VTX"/>
                 </tableViewController>

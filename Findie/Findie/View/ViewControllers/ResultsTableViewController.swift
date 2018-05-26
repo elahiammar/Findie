@@ -7,7 +7,8 @@
 //
 
 import UIKit
-import MapKit
+import RxSwift
+import RxCocoa
 
 class ResultsTableViewController: UITableViewController {
 
@@ -19,7 +20,7 @@ class ResultsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupTableView()
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -38,31 +39,8 @@ class ResultsTableViewController: UITableViewController {
             present(alertController, animated: true, completion: nil)
         }
     }
-    
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
-    }
-
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SearchResultsTableViewCell", for: indexPath) as! SearchResultsTableViewCell
-        return cell
-        
-    }
-    
-    // MARK: - Private Functions
-    
-    private func setupTableView() {
-        tableView.tableFooterView = UIView(frame: .zero)
-        tableView.register(SearchResultsTableViewCell.self, forCellReuseIdentifier: "SearchResultsTableViewCell")
-    }
-    
-    // MARK: - Public Functions
+ 
+    // MARK: - Functions
     
     public func searchLocation(with locationName: String) {
         if LocationManager.shared.getCurrentCoordinate() != nil {
