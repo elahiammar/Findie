@@ -53,8 +53,7 @@ class CategoriesCollectionViewController: UICollectionViewController {
             let width = (collectionView!.frame.size.width / numberOfItemsPerRow) - leftRightPadding
             let height = width
             flowLayout.itemSize = CGSize(width: width, height: height)
-            collectionView?.setCollectionViewLayout(flowLayout, animated: true)
-            
+            collectionView?.setCollectionViewLayout(flowLayout, animated: true)   
         }
     }
     
@@ -74,7 +73,6 @@ class CategoriesCollectionViewController: UICollectionViewController {
             let destinationViewController = segue.destination as! ResultsTableViewController
             let slectedItemName = viewModel.selectedItemName(with: indexPath!.item)
             destinationViewController.searchLocation(with: slectedItemName)
-            
         }
     }
 
