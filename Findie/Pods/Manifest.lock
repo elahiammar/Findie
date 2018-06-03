@@ -1,26 +1,22 @@
 PODS:
-  - Alamofire (4.7.0)
-  - GoogleMaps (2.6.0):
-    - GoogleMaps/Maps (= 2.6.0)
-  - GoogleMaps/Base (2.6.0)
-  - GoogleMaps/Maps (2.6.0):
-    - GoogleMaps/Base
+  - Alamofire (4.7.2)
+  - FoursquareAPIClient (4.0.1)
   - RxCocoa (4.1.2):
     - RxSwift (~> 4.0)
   - RxSwift (4.1.2)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
-  - GoogleMaps
+  - FoursquareAPIClient
   - RxCocoa (~> 4.0)
   - RxSwift (~> 4.0)
 
 SPEC CHECKSUMS:
-  Alamofire: 907e0a98eb68cdb7f9d1f541a563d6ac5dc77b25
-  GoogleMaps: 42f91c68b7fa2f84d5c86597b18ceb99f5414c7f
+  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  FoursquareAPIClient: 12fbe6aa7b11485ee8314c7590458b6baa226f4e
   RxCocoa: d88ba0f1f6abf040011a9eb4b539324fc426843a
   RxSwift: e49536837d9901277638493ea537394d4b55f570
 
-PODFILE CHECKSUM: fed540e91398048ea1b737186563bc394178a1dd
+PODFILE CHECKSUM: f54a926b9bba9d3104bf7249a532239851029de2
 
 COCOAPODS: 1.4.0
