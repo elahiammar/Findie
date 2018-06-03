@@ -20,8 +20,9 @@ struct WebServices: WebServicesProtocol {
         
         let search = MKLocalSearch(request: request)
         search.start { (response, error) in
-            print(response?.mapItems)
-            
+            if error != nil {
+                
+            }
         }
     }
     
