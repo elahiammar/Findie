@@ -15,7 +15,7 @@ final class LocationManager: NSObject, CLLocationManagerDelegate {
     
     static let shared = LocationManager()
     private let locationManager = CLLocationManager()
-    private var currentCoordinate: CLLocationCoordinate2D?
+    private var currentCoordinates: CLLocationCoordinate2D?
     
     // MARK: - Life Cycle
     
@@ -23,8 +23,8 @@ final class LocationManager: NSObject, CLLocationManagerDelegate {
     
     // MARK: - Public Functions
     
-    func getCurrentCoordinate() -> CLLocationCoordinate2D? {
-        return self.currentCoordinate
+    func getCurrentCoordinates() -> CLLocationCoordinate2D? {
+        return self.currentCoordinates
     }
     
     func setupLocation() {
@@ -61,7 +61,7 @@ final class LocationManager: NSObject, CLLocationManagerDelegate {
     
     internal func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if locations.first != nil {
-            currentCoordinate = locations.first?.coordinate
+            currentCoordinates = locations.first?.coordinate
         }
     }
     

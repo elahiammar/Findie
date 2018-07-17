@@ -11,18 +11,15 @@ import Foundation
 class ResultsViewModel {
 
     // MARK: Properties
-    
-    var webService: WebServicesProtocol
-
+   
     // MARK: Functions
-    
-    init(intWebServices webServices: WebServices) {
-        webService = webServices
-    }
-    
+
     func searchLocation(with locationName: String) {
-        webService.searchLocation(with: locationName) { (dataArray, error) in
-            
+        if let coordinates = LocationManager.shared.getCurrentCoordinates() {
+            let latLong = "\(coordinates.latitude), \(coordinates.longitude)"
+            APIClient.location(name: locationName, latLong: latLong) { results in
+                print(results)
+            }
         }
     }
     

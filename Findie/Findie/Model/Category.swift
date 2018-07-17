@@ -21,7 +21,7 @@ class Category: NSObject {
         // Set the value
         self.titleName = titleName!
         self.imageName = imageName!
-        
     }
+    
 }
 

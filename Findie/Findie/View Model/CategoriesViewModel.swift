@@ -31,7 +31,7 @@ class CategoriesViewModel {
 
     func initialize() {
         // Location
-        if LocationManager.shared.getCurrentCoordinate() == nil {
+        if LocationManager.shared.getCurrentCoordinates() == nil {
             LocationManager.shared.setupLocation()
             
         }

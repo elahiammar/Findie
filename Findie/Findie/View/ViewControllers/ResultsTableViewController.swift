@@ -14,7 +14,7 @@ class ResultsTableViewController: UITableViewController {
 
     // MARK: - Properties
     
-    fileprivate var viewModel: ResultsViewModel = ResultsViewModel(intWebServices: WebServices())
+   fileprivate var viewModel: ResultsViewModel = ResultsViewModel()
     
     // MARK: - Life Cycle
     
@@ -43,9 +43,8 @@ class ResultsTableViewController: UITableViewController {
     // MARK: - Functions
     
     public func searchLocation(with locationName: String) {
-        if LocationManager.shared.getCurrentCoordinate() != nil {
+        if LocationManager.shared.getCurrentCoordinates() != nil {
             viewModel.searchLocation(with: locationName)
-            
         }
     }
     
