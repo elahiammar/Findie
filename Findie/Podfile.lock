@@ -18,15 +18,15 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   Alamofire:
-    :commit: 32e38a4db9f96a1391c6727044d29676dd0322a2
+    :commit: 2c99a6691dac40f03ef9f9e89aaf2eb751843393
     :git: https://github.com/Alamofire/Alamofire.git
 
 SPEC CHECKSUMS:
-  Alamofire: 8dc618ab9e6a26d9d77559e4c35e59e56451e69e
+  Alamofire: 2ef6d6c984c5d21c366e9b41a9ae7dfee2b67a44
   FoursquareAPIClient: 12fbe6aa7b11485ee8314c7590458b6baa226f4e
   RxCocoa: 0b54909c902e1e581212a03e690bbd94032d8baa
   RxSwift: 99e10317ddfcc7fbe01356aafd118fde4a0be104
 
-PODFILE CHECKSUM: 385ff78e7b391863f4454c17a0e6a8ba1668233e
+PODFILE CHECKSUM: fa6d68b3c8821b585495d677523693e7e1aab7d7
 
 COCOAPODS: 1.4.0

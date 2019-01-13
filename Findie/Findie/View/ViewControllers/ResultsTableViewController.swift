@@ -29,7 +29,7 @@ class ResultsTableViewController: UITableViewController {
             let alertController = UIAlertController(title: "Go to the Settings?", message: "The location permission was not authorized. Please enable it in the Settings to continue.", preferredStyle: .alert)
             let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
             let settingsAction = UIAlertAction(title: "Settings", style: .default) { _ in
-                if let appSetting = URL(string: UIApplicationOpenSettingsURLString) {
+                if let appSetting = URL(string: UIApplication.openSettingsURLString) {
                     UIApplication.shared.open(appSetting, options: [:], completionHandler: nil)
                     
                 }

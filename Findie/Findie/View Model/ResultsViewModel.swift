@@ -17,9 +17,10 @@ class ResultsViewModel {
     func searchLocation(with locationName: String) {
         if let coordinates = LocationManager.shared.getCurrentCoordinates() {
             let latLong = "\(coordinates.latitude), \(coordinates.longitude)"
-            APIClient.location(name: locationName, latLong: latLong) { results in
-                print(results)
-            }
+            print(latLong)
+//            APIClient.location(name: locationName, latLong: latLong) { results in
+//                print(results)
+//            }
         }
     }
     
